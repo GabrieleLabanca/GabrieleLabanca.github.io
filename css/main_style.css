@@ -1,0 +1,123 @@
+:root {
+  --col-bkg:   rgba(234, 226, 183, 1); 
+	--col-txt-a: rgba(251, 177, 57, 1);
+	--col-box-a: rgba(214, 40, 40, 0.7);
+	--col-txt-b: rgba(0, 48, 73, 1);
+	--col-box-b: rgba(247, 127, 0, 0.7);
+	--col-txt-a-hov: rgba(251, 177, 57, 1);
+	--col-box-a-hov: rgba(214, 40, 40, 0.3);
+	--col-txt-b-hov: rgba(0, 48, 73, 1);
+	--col-box-b-hov: rgba(247, 127, 0, 0.3);
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, ul, img {margin:0px; padding:0px; }
+
+
+body { font-family: Arial, Helvetica, sans-serif; }
+
+a:link, a:visited {
+	color: black;
+  text-decoration: underline;
+	cursor: auto; 
+}
+
+a:active:link, a:active:visited {
+	color: black;
+  text-decoration: underline;
+	cursor: auto; 
+}
+
+
+.clearfix {
+	overflow: auto;
+}
+
+.container {
+	width: 800px; 
+	margin: 0 auto ;
+}
+
+
+
+#main .container {
+  background: var(--col-bkg);
+}
+
+#logo {
+	float: left;
+	padding: 25px;
+}
+
+
+#tagline {
+ 	float: left;
+	padding: 40px 0 0 0;
+}
+
+#menu {
+  margin-left: 290px;
+	/*margin: auto; /* TODO centrare */
+}
+
+
+#menu ul {
+	list-style: none;
+}
+
+#menu ul li {
+	float: left;
+	padding: 20px;
+  background: var(--col-box-a);
+	color: var(--col-txt-a);
+	margin: 2px;
+}
+
+#menu ul li:hover {
+	float: left;
+	padding: 20px;
+  background: var(--col-txt-a);
+	color: var(--col-box-a);
+	margin: 2px;
+}
+
+#menu ul li a {
+  text-decoration: none;
+}
+
+
+#content {
+	width: 510;
+	padding: 20px;
+  float: left;
+	color: rgba(204,0,0,0.5);
+}
+
+#sidebar {
+	float: left;
+}
+
+#sidebar ul li {
+	list-style: none;
+	background: var(--col-box-b);
+	color: var(--col-txt-b);
+	padding: 20px;
+	margin: 2px;
+}
+
+
+
+#footer .container {
+	background: #b5b5b5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
