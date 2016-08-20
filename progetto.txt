@@ -1,0 +1,12 @@
+name                        link to       contents
+
+index.html                 
+  |-curriculum.html                       Labanca_Gabriele_curriculum.txt, [elaboratoSoftSkills], [tesi]
+  |-musica.html             index.html
+	|-blog.html               index.html
+
+
+
+
+
+

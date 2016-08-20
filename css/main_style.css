@@ -1,13 +1,14 @@
 :root {
-  --col-bkg: white;
-	--col-txt: rgba(132, 126, 46, .7);
 
+	/* Clear Arctic Seas - Varium@Coolors*/
+	--col-bkg:   rgba(122, 183, 193, 1);
+	--col-txt:   white;
 
-	--col-box-a: rgba(0, 25, 234, .7);
-	--col-box-b: rgba(234, 234, 26, .7);
-	--col-box-c: rgba(26, 26, 234, .7);
-
-	--col-spec:  rgba(132, 126, 46, .7);
+	--col-main-light: rgba(101, 149, 163, .7); 
+	--col-main: rgba(83, 117, 130, .7);
+	--col-main-dark: rgba(53, 74, 84, .7);
+	
+	--col-spec:  rgba(36, 48, 53, 1);
 
 
 
@@ -17,32 +18,73 @@
 
 }
 
-/*:root {
-  --col-bkg:   rgba(245, 245, 245, 1); 
+.menu {
+  background: var(--col-main-light);
+	color: var(--col-txt);
+}
 
-	--col-txt-a: rgba(195, 215, 223, 1);
-	--col-box-a: rgba(105, 145, 172, .7);
-	--col-txt-b: rgba(195, 215, 223, 1);/*rgba(215, 92, 55, 1);
-	--col-box-b: rgba(103, 114, 122, .7);
-	--col-txt-a-hov: rgba(195, 215, 223, 1);
-	--col-box-a-hov: rgba(105, 145, 172, .3);
-	--col-txt-b-hov: rgba(215, 92, 55, 1); 
-	--col-box-b-hov: rgba(103, 114, 122, .3);
-}*/
+.typeA {
+	width: 50%;
+	float: left;
+	padding: 10px;
+	position: relative;
+	background: var(--col-main);
+	color: var(--col-txt);
+}
+
+.typeB {
+	width: 50%;
+	float: right;
+	padding: 10px;
+	position: relative;
+	background: var(--col-main-dark);
+	color: var(--col-txt);
+}
+
+.special {
+	background: var(--col-spec);
+	color: var(--col-txt);
+}
+
+.popup {
+	width: 50%;
+	border-style: dotted;
+	border-color: var(--col-txt);
+	border-width: 1px;
+	color: var(--col-txt);
+}
+
+.popup p {
+  margin: 5px;
+	padding: 5px;
+}
+
+
+
+
 
 body, div, h1, h2, h3, h4, h5, h6, p, ul, img {margin:0px; padding:0px; }
 
 
-body { font-family: Arial, Helvetica, sans-serif; }
+body { 
+  font-family: Arial, Helvetica, sans-serif; 
+}
 
 a:link, a:visited {
-	color: black;
+	color: var(--col-spec);
   text-decoration: underline;
 	cursor: auto; 
 }
 
+a:link:hover, a:visited:hover {
+	color: var(--col-spec);
+  text-decoration: underline;
+	/*font-style: italic;*/ /*va rimosso dal menu*/
+	cursor: auto; 
+}
+
 a:active:link, a:active:visited {
-	color: black;
+	color: var(--col-spec);
   text-decoration: underline;
 	cursor: auto; 
 }
@@ -53,10 +95,29 @@ a:active:link, a:active:visited {
 }
 
 .container {
-	width: 800px; 
 	margin: 0 auto ;
 }
 
+.clearlist {
+  list-style: none;
+}
+
+.clearlist li a {
+	text-decoration: none;
+}
+
+.bulletlist {
+  list-style-type: circle;
+	margin-left: 22px;
+}
+
+
+
+
+.compact {
+	margin: 0;
+	padding: 0;
+}
 
 
 #main .container {
@@ -64,6 +125,9 @@ a:active:link, a:active:visited {
 }
 
 #logo {
+	background: var(--col-spec);
+	color: var(--col-txt);
+	width: 100%;
 	float: left;
 	padding: 25px;
 }
@@ -74,33 +138,32 @@ a:active:link, a:active:visited {
 	padding: 40px 0 0 0;
 }
 
-div#menu {
+div.menu {
 	margin: auto; 
   width: 50%;
 }
 
-#menu ul {
+.menu ul {
 	list-style: none;
-
 }
 
-#menu ul li {
+.menu ul li {
 	float: left;
 	padding: 20px;
-  background: var(--col-box-a);
+  background: var(--col-main-light);
 	color: var(--col-txt);
 	margin: 2px;
 }
 
-#menu ul li:hover {
+.menu ul li:hover {
 	float: left;
 	padding: 20px;
   background: var(--col-txt);
-	color: var(--col-box-a);
+	color: var(--col-main-light);
 	margin: 2px;
 }
 
-#menu ul li a {
+.menu ul li a {
   text-decoration: none;
 }
 
@@ -108,35 +171,31 @@ div#menu {
 #content {
 	padding: 20px;
   float: left;
-	color: rgba(204,0,0,0.5);
+	color: var(--col-txt);
 }
 
-div#par-1 {
-	width: 50%;
-	float: left;
-	padding: 10px;
-	position: relative;
-	background: var(--col-box-b);
-	color: var(--col-txt);
+
+.par1 { 
 }
-div#par-2 {
-	width: 50%;
-	float: right;
-	padding: 10px;
-	position: relative;
+
+.par2 {
 	top: -12px;
-	background: var(--col-box-c);
-	color: var(--col-txt);
 }
-div#par-3 {
-	width: 50%;
-  float: left;
-	padding: 10px;
-	position: relative;
+
+.par3 {
 	top: -24px;
-	background: var(--col-box-b);
-	color: var(--col-txt-b);
 }
+
+.par4 {
+	top: -36px;
+}
+
+.par5 {
+	top: -48px;
+}
+
+
+
 
 
 #sidebar {
@@ -146,10 +205,10 @@ div#par-3 {
 
 #sidebar ul li {
 	list-style: none;
-	background: var(--col-box-b);
-	color: var(--col-txt-b);
-	padding: 20px;
-	margin: 2px;
+	background: var(--col-main);
+	color: var(--col-txt);
+	/*padding: 20px;
+	margin: 2px;*/
 }
 
 
@@ -158,7 +217,13 @@ div#par-3 {
 	background: #b5b5b5;
 }
 
+.popup-parent .popup {
+  display: none;
+}
 
+.popup-parent:hover .popup {
+  display: block;
+}
 
 
 
