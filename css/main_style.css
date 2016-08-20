@@ -1,14 +1,34 @@
 :root {
-  --col-bkg:   rgba(234, 226, 183, 1); 
-	--col-txt-a: rgba(251, 177, 57, 1);
-	--col-box-a: rgba(214, 40, 40, 0.7);
-	--col-txt-b: rgba(0, 48, 73, 1);
-	--col-box-b: rgba(247, 127, 0, 0.7);
-	--col-txt-a-hov: rgba(251, 177, 57, 1);
-	--col-box-a-hov: rgba(214, 40, 40, 0.3);
-	--col-txt-b-hov: rgba(0, 48, 73, 1);
-	--col-box-b-hov: rgba(247, 127, 0, 0.3);
+  --col-bkg: white;
+	--col-txt: rgba(132, 126, 46, .7);
+
+
+	--col-box-a: rgba(0, 25, 234, .7);
+	--col-box-b: rgba(234, 234, 26, .7);
+	--col-box-c: rgba(26, 26, 234, .7);
+
+	--col-spec:  rgba(132, 126, 46, .7);
+
+
+
+
+
+
+
 }
+
+/*:root {
+  --col-bkg:   rgba(245, 245, 245, 1); 
+
+	--col-txt-a: rgba(195, 215, 223, 1);
+	--col-box-a: rgba(105, 145, 172, .7);
+	--col-txt-b: rgba(195, 215, 223, 1);/*rgba(215, 92, 55, 1);
+	--col-box-b: rgba(103, 114, 122, .7);
+	--col-txt-a-hov: rgba(195, 215, 223, 1);
+	--col-box-a-hov: rgba(105, 145, 172, .3);
+	--col-txt-b-hov: rgba(215, 92, 55, 1); 
+	--col-box-b-hov: rgba(103, 114, 122, .3);
+}*/
 
 body, div, h1, h2, h3, h4, h5, h6, p, ul, img {margin:0px; padding:0px; }
 
@@ -54,28 +74,28 @@ a:active:link, a:active:visited {
 	padding: 40px 0 0 0;
 }
 
-#menu {
-  margin-left: 290px;
-	/*margin: auto; /* TODO centrare */
+div#menu {
+	margin: auto; 
+  width: 50%;
 }
-
 
 #menu ul {
 	list-style: none;
+
 }
 
 #menu ul li {
 	float: left;
 	padding: 20px;
   background: var(--col-box-a);
-	color: var(--col-txt-a);
+	color: var(--col-txt);
 	margin: 2px;
 }
 
 #menu ul li:hover {
 	float: left;
 	padding: 20px;
-  background: var(--col-txt-a);
+  background: var(--col-txt);
 	color: var(--col-box-a);
 	margin: 2px;
 }
@@ -86,14 +106,42 @@ a:active:link, a:active:visited {
 
 
 #content {
-	width: 510;
 	padding: 20px;
   float: left;
 	color: rgba(204,0,0,0.5);
 }
 
+div#par-1 {
+	width: 50%;
+	float: left;
+	padding: 10px;
+	position: relative;
+	background: var(--col-box-b);
+	color: var(--col-txt);
+}
+div#par-2 {
+	width: 50%;
+	float: right;
+	padding: 10px;
+	position: relative;
+	top: -12px;
+	background: var(--col-box-c);
+	color: var(--col-txt);
+}
+div#par-3 {
+	width: 50%;
+  float: left;
+	padding: 10px;
+	position: relative;
+	top: -24px;
+	background: var(--col-box-b);
+	color: var(--col-txt-b);
+}
+
+
 #sidebar {
 	float: left;
+	width: 10%;
 }
 
 #sidebar ul li {
