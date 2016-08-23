@@ -107,7 +107,7 @@ a:active:link, a:active:visited {
 }
 
 
-
+ 
 
 .compact {
 	margin: 0;
@@ -166,12 +166,12 @@ a:active:link, a:active:visited {
 
 #body {
 	padding: 10px;
-	padding-bottom: 150px;
+	/* padding-bottom: 150px; */
 }
 
 #footer {
   position: absolute;
-	height: 150px;
+	/* height: 150px; */
 	width: 100%;
 }
 
@@ -284,10 +284,31 @@ div.menu {
   display: none;
 }
 
+/*
 .popup-parent:hover .popup {
   display: block;
 }
+*/
 
+.popup-container {
+	float: left;
+	width: 55%;
+	border-style: dotted;
+	border-color: var(--col-txt);
+	border-width: 1px;
+	background: var(--col-txt);
+  color: var(--col-spec);
+	position: absolute;
+	z-index: 10;
+	top: 10px;
+	left: 250px;
+	visibility: hidden;
+}
+
+.popup-container p {
+  margin: 5px;
+	padding: 5px;
+}
 
 
 
