@@ -43,7 +43,8 @@ function popup(popParent) {
 
 
   // TODO 
-	popupAnimation(popParent);
+	//popupAnimation(popParent);
+
 
 
   popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].style.visibility = "visible";
@@ -57,10 +58,10 @@ function popup(popParent) {
 
 function popout(popParent) {
   
-	console.log("popout " + popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].nodeName);
+	/*console.log("popout " + popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].nodeName);
 
   popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].style.visibility = "hidden";
-  
+  */
 
 }
 
