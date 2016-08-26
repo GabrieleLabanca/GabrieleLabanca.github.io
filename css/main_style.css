@@ -79,6 +79,10 @@ a:active:link, a:active:visited {
 	cursor: auto; 
 }
 
+b {
+  color: rgb(255, 253, 187);
+}
+
 
 .clearfix {
 	overflow: auto;
