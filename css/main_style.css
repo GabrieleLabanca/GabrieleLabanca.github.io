@@ -38,8 +38,8 @@
   */
 
   /* Grey colors */
-	--col-bkg:        rgba(204, 238, 255, 1);      
-	--col-txt:        white;
+	--col-bkg:        rgba(204, 221, 238, 1);      
+	--col-txt:        rgba(221, 221, 221, 1);
 
 	--col-main-light: rgba(51, 51, 102, 0.7);
 	--col-main:       rgba(34, 34, 68, 0.7);
