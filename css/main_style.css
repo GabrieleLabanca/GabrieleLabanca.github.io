@@ -1,30 +1,6 @@
 :root {
 
 
-  /* HEX ALPHA 
-	 * 100% — FF
-	 * 95% — F2
-	 * 90% — E6
-	 * 85% — D9
-	 * 80% — CC
-	 * 75% — BF
-	 * 70% — B3
-	 * 65% — A6
-	 * 60% — 99
-	 * 55% — 8C
-	 * 50% — 80
-	 * 45% — 73
-	 * 40% — 66
-	 * 35% — 59
-	 * 30% — 4D
-	 * 25% — 40
-	 * 20% — 33
-	 * 15% — 26
-	 * 10% — 1A
-	 * 5% — 0D
-	 * 0% — 00
-	 */
-
 	/* Clear Arctic Seas - Varium@Coolors*/
 	/*
 	--col-bkg:   rgba(122, 183, 193, 1);
@@ -69,7 +45,14 @@ a:link, a:visited {
 a:link:hover, a:visited:hover {
 	color: var(--col-spec);
   text-decoration: underline;
-	/*font-style: italic;*/ /*va rimosso dal menu*/
+	font-style: italic; /*va rimosso dal menu*/
+	cursor: auto; 
+}
+
+.menu a:link:hover, a:visited:hover {
+	color: var(--col-spec);
+  text-decoration: underline;
+	font-style: normal; /*va rimosso dal menu*/
 	cursor: auto; 
 }
 
@@ -123,6 +106,7 @@ b {
   background: var(--col-main-light);
 	color: var(--col-txt);
 }
+
 
 .typeA {
 	width: 50%;
@@ -201,7 +185,7 @@ b {
 	padding: 40px 0 0 0;
 }
 
-div.menu {
+.menu {
 	margin: auto; 
   width: 50%;
 }
@@ -233,7 +217,8 @@ div.menu {
 
 #content {
 	padding: 20px;
-  float: left;
+	margin: auto;
+	width: 80%;
 	color: var(--col-txt);
 }
 
