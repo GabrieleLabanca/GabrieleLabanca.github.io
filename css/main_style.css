@@ -282,7 +282,7 @@ b {
 
 .popup-container {
 	float: left;
-	width: 55%;
+	width: 45%;
 	border-style: dotted;
 	border-color: var(--col-txt);
 	border-width: 1px;
