@@ -2,6 +2,7 @@
 /* 1 - colors
  * 2 - font
  * 3 - dimensions and positions
+ * 4 - behaviour
  */
 
 
@@ -49,9 +50,6 @@ body {
 	background: darkgrey;
 }
 
-header { 	
-	width: 
-}
 
 /* .menu */
 .menu {
@@ -62,31 +60,63 @@ header {
 	list-style-type: none;
 }
 
-.menu a {
+.menu li {
 	width: 33.333%;
-	width: calc( 80% /3 );
-	padding: calc( 20% /6 );
+	width: calc( 100% /3 );
 	float: left;
-	background: orange;	
-
+	text-align: center;
+	margin: auto;
 	text-decoration: none;
+
 }
 
-.menu a:hover {
-  background: red;
+.photo-button {
+position: relative;
+}
+
+.photo-button img {
+	width: 100%;
+	opacity: .5;
 }
 
 
-/* #content */
+.photo-button h2 {
+	position: absolute;
+	top: 30%;
+	
+	z-index: 10;
+	padding: 1%;
+	background: rgba(255,255,255,.4);
+}
+
+
+
+
+
+
+
+
+/* #abstract */
+#abstract {
+	margin: auto;
+	width: 100%;
+	background: lightgrey;
+}
+
+#abstract p {
+  padding: 1%;
+	background: lightblue;
+}
+
+/*#content*/
 #content {
 	margin: auto;
 	width: 100%;
-	background: lightgreen;
+	background: darkgrey;
 }
 
 #content p {
-	padding: 1%;
-	background: lightblue;
+	padding: 0;
 }
 
 #content ul {
@@ -95,7 +125,66 @@ header {
 }
 
 #content ul li {
-	margin-left: 3%;
+	margin-left: ;
 }
+
+/* popups */
+
+.click-content {
+  width: 50%;
+	float: left;
+}
+
+.informations {
+  display: none;
+}
+
+.popup-container {
+	width: 50%;
+  float: left;
+}
+
+
+
+
+
+
+
+/* * * * * * * * *
+ * 4 - Behaviour *
+ * * * * * * * * */
+
+.popup-parent .popup {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

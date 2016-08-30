@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/photo_windows.css">
 
     <script src="script/popup_header.js"></script>
+    <script src="script/clickup_header.js"></script>
 
 
 
@@ -27,24 +28,15 @@
 					<div id="tagline">
 						<h3></h3>
 					</div>
-				
-					<div style="clear:both"></div>
-					
-					<div class="menu">
-						<ul>
-							<a href="#istruzione"><li>Istruzione</li></a>
-							<a href="#competenze"><li>Competenze</li></a>
-							<a href="#esperienze"><li>Esperienze</li></a>
-						</ul>
-					</div>
-					
-					<div style="clear:both"></div>
-					
-				</div>
+			  </div>
 
-				<div id="content">
+				<div style="clear:both"></div>
+					
+				
+
+				<div id="abstract">
 					<p>
-						Mi chiamo Gabriele Labanca, nato a Torino il 2 febbraio 1994. Sono uno <b>studente di Fisica</b> all'Universit&agrave di Padova. Progetto di affiancare alla prosecuzione degli studi un <b>lavoro part-time</b>: laureandomi a settembre, mi immatricoler&ograve a Torino per la Magistrale. 
+					Mi chiamo Gabriele Labanca, sono uno <b>studente di Fisica</b> all'Universit&agrave di Padova. Cerco un <b>lavoro part-time</b> a Torino, dove proseguir&ograve gli studi.
 					</p> 
 
 					<p>
@@ -59,278 +51,299 @@
 					<p>
 					  Oltre alle <b>competenze</b> proprie del corso di laurea (matematiche, fisiche, di analisi dati) sono attento allo sviluppo di quelle <b>trasversali</b> (lavoro di gruppo, affidabilit&agrave, organizzazione). 
 					</p>
-					  	
 
-        
-          <!-- INSERIRE IMMAGINE LINE BREAK -->
-					<hr>
- 
-					<div id="istruzione" class="typeA par1">
+				</div>
+					  	
+				<div style="clear:both"></div>
+
+				<div class="menu">
+					<ul>
+						<li id="istruzione-button" class="photo-button" onmousedown="clickup(this,'istruzione')" onmouseover="opacityUp(this)" onmouseout="opacityDown(this)">
+							<img src="images/istruzione.jpg" class="opacity-img"></img>
+							<h2>Istruzione</h2>
+						</li>
+						<li id="competenze-button" class="photo-button" onmousedown="clickup(this,'competenze')" onmouseover="opacityUp(this)" onmouseout="opacityDown(this)">
+							<img src="images/competenze.jpg" class="opacity-img"></img>
+							<h2>Competenze</h2>
+						</li>
+						<li id="esperienze-button" class="photo-button" onmousedown="clickup(this,'esperienze')" onmouseover="opacityUp(this)" onmouseout="opacityDown(this)">
+							<img src="images/esperienze.jpg" class="opacity-img"></img>
+							<h2>Esperienze</h2>
+						</li>
+					</ul>
+				</div>
+
+
+				<div style="clear:both"></div>
+
+        <div id="content">
+          
+					<div class="click-content"></div>
+
+					<div class="popup-container"></div>
+
+					<!-- OPEN istruzione -->
+					<div id="istruzione" class="informations">
 						<h2>Istruzione</h2>
-						<ul class="clearlist bulletlist">
+						<ul class="">
 							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
 								Diploma di maturit&agrave classica 
 								<div class="popup compact">
 									<p>
-									  <i>2008 - 2013</i><br>
-									  Liceo Classico Statale C. Cavour, Torino
+								  	<i>2008 - 2013</i><br>
+										Liceo Classico Statale C. Cavour, Torino <br>
 										Votazione: 98/100
-							    </p>
+						    	</p>
 								</div>
 							</li>
 							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
 								Laurea in Fisica
-							  <div class="popup compact">
+						  	<div class="popup compact">
 									<p>
-									  <i>2013 - settembre 2016</i><br>
-									  Universit&agrave degli Studi, Padova <br>
+								 	 	<i>2013 - settembre 2016</i><br>
+								  	Universit&agrave degli Studi, Padova <br>
 										Tesi: <a href="contents/Gabriele_Labanca_TesiTriennale.pdf" download style="font-style-italic">Studio di sistema di monitoring di un laser di calibrazione per il rivelatore iTOP a Belle II</a> con il prof. Stefano Lacaprara e il dott. Alessandro Mord&agrave. <br>
 										Corsi facoltativi: Campi elettromagnetici, Programmazione a oggetti e C++, Metodi computazionali per la Fisica.
-                  </p>
-							  </div>
+                 	</p>
+						  	</div>
 							</li>
 						</ul>
-						<div class="popup-container"></div>
-					</div> 
-					<!-- CLOSE istruzione -->
-
-
-					<!-- OPEN competenze -->
-					<div id="competenze" class="typeB par2">
-						<h2>Competenze</h2>
-						<h3>Competenze scientifiche</h3>
-						<ul class="clearlist bulletlist">
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Fisica
-								<div class="popup compact">
-									<p>
-									  Fisica classica: meccanica, meccanica analitica, elettromagnetismo, basi di fluidodinamica e ottica; formalismo quantistico: funzioni d'onda, operatori, cenni sulla teoria della misura.
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Matematica
-								<div class="popup compact">
-									<p>
-									  Le competenze necessarie per il corso di studi in Fisica: analisi reale e complessa, geometria analitica, matematica statistica, trasformazioni di Fourier, meccaniche lagrangiana ed hamiltoniana, spazi di Hilbert.
-								 </p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Analisi dati
-								<div class="popup compact">
-									<p>
-									  <ul class="indent">
-											<li>Strumenti statistici</li>
-											<li>Programmi <i>ad hoc</i>: Root, con basi di Roofit; basi di Mathematica.</li>
-											<li>Tesi sperimentale: rimozione degli eventi di fondo, fitting di segnali, distribuzione degli eventi a n fotoni</li>
-											<li>Attivit&agrave di laboratorio</li>
-										</ul>
-							    </p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Informatica
-								<div class="popup compact">
-									<p>
-									  <ul class="indent">
-											<li>Linguaggio C++. Cenni di Perl, Python</li>
-										  <li>Dimestichezza con l'ambiente Linux: script, installazione da sorgente, terminale</li>
-											<li>Conoscenza di base di Git</li>
-											<li>Basi di html, CSS</li>
-											<li>Familiarit&agrave con l'ambiente Windows</li>
-										</ul>
-							    </p>
-								</div>
-							</li>
-						</ul>
-
-
-						<h3>Competenze linguistiche</h3>
-						<ul class="clearlist bulletlist">
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Italiano
-								<div class="popup compact">
-									<p>
-									  Ho un'ottima conoscenza della lingua italiana, maturata durante il liceo e leggendo molto.
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Inglese
-								<div class="popup compact">
-									<p>
-									  Possiedo un buon livello di lingua inglese, particolarmente approfondito sul versante scritto.
-									</p>
-								</div>
-							</li>
-						  <li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Francese, Spagnolo
-								<div class="popup compact">
-									<p>
-									  Ho conoscenza di base dello Spagnolo e del Francese, al livello di poter leggere un testo e comprenderlo.
-									</p>
-								</div>
-							</li>
-						</ul>
-
-
-						<h3>Competenze umane</h3>
-						<ul class="clearlist bulletlist">
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Teamwork
-								<div class="popup compact">
-									<p>
-									  Ritengo di avere buone capacit&agrave di teamwork, sviluppate in varie occasioni. 
-									</p>
-								</div>
-							</li>
-							 <li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Responsabilit&agrave
-								<div class="popup compact">
-									<p>
-										Ho un forte senso di responsabilit&agrave e di rispetto degli impegni presi/assegnati. 
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Comunicazione
-								<div class="popup compact">
-									<p>
-									Pongo molta attenzione alla <b>comunicazione e alla comprensione</b> reciproca; sono consapevole dell'esistenza di meccaniche psicologiche influenti nelle situazioni lavorative e sono attento a evitare che diventino incontrollate. 
-									</p>
-								</div>
-							</li>
-						</ul>
-            
-						<div class="popup-container"></div>
-
-
 					</div>
-					<!-- CLOSE competenze -->
-					
-					
-					
-					
-					
-					<!-- OPEN esperienze -->
-					<div id="esperienze" class="typeA par3">
-						<h2>Esperienze</h2>
-						<h3>Attivit&agrave scolastiche</h3>
-						<ul class="clearlist bulletlist">
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Stage di Matematica
-								<div class="popup compact">
-									<p>
-									  Bardonecchia, TO: <a href="http://www.mathesistorino.it/?page_id=103">link alla pagina</a>.
-										<ul class="indent">
-											<li>Primo posto del gruppo nella gara globale</li>
-											<li>Terzo posto nella gara a squadre</li>
-										</ul>
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Attivit&agrave di tutoraggio
-								<div class="popup compact">
-									<p>
-									Nell'anno 2012 ho svolto attivit&agrave di tutoraggio, retribuita dal liceo, consistente nell'aiuto per il recupero in itinere della materia Latino, per allievi del ginnasio. \`E stata occasione di prova per le mie capacit&agrave di <b>esporre</b> in modo chiaro, <b>monitorare</b> il lavoro altrui e <b>organizzare</b> gli incontri compatibilmente con gli altri impegni scolastici.
-								 </p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Progetto Scientific Summer Academy
-								<div class="popup compact">
-									<p>
-									Il progetto, promosso da <a href="http://www.agorascienza.it">Agor&agrave Scienza</a>, propone agli studenti di entrare in contatto con il mondo scientifico e direttamente con i ricercatori: nel mio caso ho lavorato nel laboratorio di Fotonica del Politecnico di Torino.
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Giochi della Chimica
-								<div class="popup compact">
-									<p>
-									Decimo posto nella categoria Licei di Torino. Attivit&agrave promossa dalla <a href="www.soc.chim.it">Societ&agrave Chimica Italiana</a>.
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Certificazione ESOL Cambridge e viaggio di studio a Londra
-								<div class="popup compact">
-									<p>
-									Ho conseguito il First Certificate, ottenendo una votazione corrispondente al livello C1. Risultando tra i <b>migliori tre</b> del mio liceo, la scuola ha offerto una borsa di studio per un viaggio di studio a Londra, che ho utilizzato per un corso alla <a href="www.stgeorges.co.uk"><i>St. George International</i></a>.
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-						    Attivit&agrave di Laboratorio
-								<div class="popup compact">
-									<p>
-									Ritengo che l'attività in laboratorio abbia avuto una duplice conseguenza: da un lato, la concretizzazione delle conoscenze teoriche e il confronto con i <b>problemi pragmatici</b> derivanti dall'utilizzo di macchinari; dall'altro l'educazione al <b>lavoro in team</b>, la suddivisione dei compiti  e il <b>rispetto delle scadenze</b>.
-									</p>
-								</div>
-							</li>
-						</ul>
+				</div> 
+				<!-- CLOSE istruzione -->
 
 
-						<h3>Attivit&agrave extrascolastiche</h3>
-						<ul class="clearlist bulletlist">
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Animazione
-								<div class="popup compact">
-									<p>
-									Ho gestito dal 2007 al 2011 le attivit&agrave di animazione in un oratorio. Ritengo opportuno citare questa esperienza, per il fatto che mi ha messo, piuttosto giovane, per la prima volta a confronto con <b>scadenze e responsabilit&agrave</b>: rispondevo dell'organizzazione delle attivit&agrave per un gruppo.
+				<!-- OPEN competenze -->
+				<div id="competenze" class="informations">
+					<h2>Competenze</h2>
+					<h3>Competenze scientifiche</h3>
+					<ul class="clearlist bulletlist">
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Fisica
+							<div class="popup compact">
+								<p>
+								  Fisica classica: meccanica, meccanica analitica, elettromagnetismo, basi di fluidodinamica e ottica; formalismo quantistico: funzioni d'onda, operatori, cenni sulla teoria della misura.
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Matematica
+							<div class="popup compact">
+								<p>
+								  Le competenze necessarie per il corso di studi in Fisica: analisi reale e complessa, geometria analitica, matematica statistica, trasformazioni di Fourier, meccaniche lagrangiana ed hamiltoniana, spazi di Hilbert.
+							 </p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Analisi dati
+							<div class="popup compact">
+								<p>
+								  <ul class="indent">
+										<li>Strumenti statistici</li>
+										<li>Programmi <i>ad hoc</i>: Root, con basi di Roofit; basi di Mathematica.</li>
+										<li>Tesi sperimentale: rimozione degli eventi di fondo, fitting di segnali, distribuzione degli eventi a n fotoni</li>
+										<li>Attivit&agrave di laboratorio</li>
+									</ul>
+						    </p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Informatica
+							<div class="popup compact">
+								<p>
+								  <ul class="indent">
+										<li>Linguaggio C++. Cenni di Perl, Python</li>
+									  <li>Dimestichezza con l'ambiente Linux: script, installazione da sorgente, terminale</li>
+										<li>Conoscenza di base di Git</li>
+										<li>Basi di html, CSS</li>
+										<li>Familiarit&agrave con l'ambiente Windows</li>
+									</ul>
+						    </p>
+							</div>
+						</li>
+					</ul>
 
-										Ho fatto in seguito altre saltuarie esperienze di animazione.
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Soft Skills
-								<div class="popup compact">
-									<p>
-									Nei mesi da marzo a giugno 2016 ho frequentato il corso <a href="http://www.collegiomazza.it/cultura-e-formazione/corsi/soft-skills-in-action-2016/"><i>Soft Skills in Action</i></a>, incentrato sullo sviluppo esperienziale, durante attivit&agrave di gruppo, di <b>competenze trasversali</b> spendibili in ambito lavorativo. Sono stati affrontati temi quali comunicazione, gestione del tempo, leadership e teamwork. Ha chiuso l'esperienza l'<a href="contents/Labanca_Gabriele_SoftSkills.pdf">elaborato finale</a>, sintesi personale del percorso svolto, in cui evidenzio gli aspetti in cui ho avuto maggiori miglioramenti.
-									</p>
-								</div>
-							</li>
-						</ul>
+					<h3>Competenze linguistiche</h3>
+					<ul class="clearlist bulletlist">
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Italiano
+							<div class="popup compact">
+								<p>
+								  Ho un'ottima conoscenza della lingua italiana, maturata durante il liceo e leggendo molto.
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Inglese
+							<div class="popup compact">
+								<p>
+								  Possiedo un buon livello di lingua inglese, particolarmente approfondito sul versante scritto.
+								</p>
+							</div>
+						</li>
+					  <li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Francese, Spagnolo
+							<div class="popup compact">
+								<p>
+								  Ho conoscenza di base dello Spagnolo e del Francese, al livello di poter leggere un testo e comprenderlo.
+								</p>
+							</div>
+						</li>
+					</ul>
 
-
-						<h3>Interessi personali</h3>
-						<ul class="clearlist bulletlist">
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Musica
-								<div class="popup compact">
-									<p>
-									  Studio musica dal 2006: ho frequentato corsi privati di pianoforte classico e armonia, ho inoltre cofondato due gruppi e sono stato chiamato a suonare in un trio verso la fine del liceo. Nel 2015 ho fatto alcune date in duo con un batterista.
-									</p>
-								</div>
-							</li>
-							 <li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Crescita personale
-								<div class="popup compact">
-									<p>
-									Sto proseguendo da anni un percorso di automiglioramento, partendo inizialmente da una condizione di sedentariet&agrave: sul piano alimentare, sportivo (mi alleno almeno tre volte a settimana) e psicologico (percorso con un terapeuta, <a href="https://en.wikipedia.org/wiki/Research_on_meditation">meditazione</a>).
-									</p>
-								</div>
-							</li>
-							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
-								Grafica
-								<div class="popup compact">
-									<p>
-									  Da poco meno di un anno ho iniziato a interessarmi al campo della grafica, in senso lato: dal disegno a mano libera alla computer grafica, con Inkscape (ho messo in atto le mie competenze elementari nella creazione del curriculum). Per il mio corso di studi si &egrave inoltre reso quasi necessario imparare l'uso di Latex; so pertanto costruire documenti a molti file, con inserimento di formule, tabelle, immagini. Ho studiato per mia iniziativa le basi di html, css e javascript, .
-									</p>
-								</div>
-							</li>
-						</ul>
-            
-						<div class="popup-container"></div>
-
-
-					</div>
-					<!-- CLOSE esperienze -->
+					<h3>Competenze umane</h3>
+					<ul class="clearlist bulletlist">
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Teamwork
+							<div class="popup compact">
+								<p>
+								  Ritengo di avere buone capacit&agrave di teamwork, sviluppate in varie occasioni. 
+								</p>
+							</div>
+						</li>
+						 <li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Responsabilit&agrave
+							<div class="popup compact">
+								<p>
+									Ho un forte senso di responsabilit&agrave e di rispetto degli impegni presi/assegnati. 
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Comunicazione
+							<div class="popup compact">
+								<p>
+								Pongo molta attenzione alla <b>comunicazione e alla comprensione</b> reciproca; sono consapevole dell'esistenza di meccaniche psicologiche influenti nelle situazioni lavorative e sono attento a evitare che diventino incontrollate. 
+								</p>
+							</div>
+						</li>
+					</ul>
+           
+					<div class="popup-container"></div>
+				    <div style="clear:both"></div>
 					
 				</div>
+				<!-- CLOSE competenze -->
+				
+				
+				
+				
+				
+				<!-- OPEN esperienze -->
+				<div id="esperienze" class="informations">
+					<h2>Esperienze</h2>
+					<h3>Attivit&agrave scolastiche</h3>
+					<ul class="clearlist bulletlist">
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Stage di Matematica
+							<div class="popup compact">
+								<p>
+								  Bardonecchia, TO: <a href="http://www.mathesistorino.it/?page_id=103">link alla pagina</a>.
+									<ul class="indent">
+										<li>Primo posto del gruppo nella gara globale</li>
+										<li>Terzo posto nella gara a squadre</li>
+									</ul>
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Attivit&agrave di tutoraggio
+							<div class="popup compact">
+								<p>
+								Nell'anno 2012 ho svolto attivit&agrave di tutoraggio, retribuita dal liceo, consistente nell'aiuto per il recupero in itinere della materia Latino, per allievi del ginnasio. \`E stata occasione di prova per le mie capacit&agrave di <b>esporre</b> in modo chiaro, <b>monitorare</b> il lavoro altrui e <b>organizzare</b> gli incontri compatibilmente con gli altri impegni scolastici.
+							 </p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Progetto Scientific Summer Academy
+							<div class="popup compact">
+								<p>
+								Il progetto, promosso da <a href="http://www.agorascienza.it">Agor&agrave Scienza</a>, propone agli studenti di entrare in contatto con il mondo scientifico e direttamente con i ricercatori: nel mio caso ho lavorato nel laboratorio di Fotonica del Politecnico di Torino.
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Giochi della Chimica
+							<div class="popup compact">
+								<p>
+								Decimo posto nella categoria Licei di Torino. Attivit&agrave promossa dalla <a href="www.soc.chim.it">Societ&agrave Chimica Italiana</a>.
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Certificazione ESOL Cambridge e viaggio di studio a Londra
+							<div class="popup compact">
+								<p>
+								Ho conseguito il First Certificate, ottenendo una votazione corrispondente al livello C1. Risultando tra i <b>migliori tre</b> del mio liceo, la scuola ha offerto una borsa di studio per un viaggio di studio a Londra, che ho utilizzato per un corso alla <a href="www.stgeorges.co.uk"><i>St. George International</i></a>.
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+					    Attivit&agrave di Laboratorio
+							<div class="popup compact">
+								<p>
+								Ritengo che l'attività in laboratorio abbia avuto una duplice conseguenza: da un lato, la concretizzazione delle conoscenze teoriche e il confronto con i <b>problemi pragmatici</b> derivanti dall'utilizzo di macchinari; dall'altro l'educazione al <b>lavoro in team</b>, la suddivisione dei compiti  e il <b>rispetto delle scadenze</b>.
+								</p>
+							</div>
+						</li>
+					</ul>
+
+					<h3>Attivit&agrave extrascolastiche</h3>
+					<ul class="clearlist bulletlist">
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Animazione
+							<div class="popup compact">
+								<p>
+								Ho gestito dal 2007 al 2011 le attivit&agrave di animazione in un oratorio. Ritengo opportuno citare questa esperienza, per il fatto che mi ha messo, piuttosto giovane, per la prima volta a confronto con <b>scadenze e responsabilit&agrave</b>: rispondevo dell'organizzazione delle attivit&agrave per un gruppo.
+										Ho fatto in seguito altre saltuarie esperienze di animazione.
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Soft Skills
+							<div class="popup compact">
+								<p>
+								Nei mesi da marzo a giugno 2016 ho frequentato il corso <a href="http://www.collegiomazza.it/cultura-e-formazione/corsi/soft-skills-in-action-2016/"><i>Soft Skills in Action</i></a>, incentrato sullo sviluppo esperienziale, durante attivit&agrave di gruppo, di <b>competenze trasversali</b> spendibili in ambito lavorativo. Sono stati affrontati temi quali comunicazione, gestione del tempo, leadership e teamwork. Ha chiuso l'esperienza l'<a href="contents/Labanca_Gabriele_SoftSkills.pdf">elaborato finale</a>, sintesi personale del percorso svolto, in cui evidenzio gli aspetti in cui ho avuto maggiori miglioramenti.
+								</p>
+							</div>
+						</li>
+					</ul>
+
+					<h3>Interessi personali</h3>
+					<ul class="clearlist bulletlist">
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Musica
+							<div class="popup compact">
+								<p>
+								  Studio musica dal 2006: ho frequentato corsi privati di pianoforte classico e armonia, ho inoltre cofondato due gruppi e sono stato chiamato a suonare in un trio verso la fine del liceo. Nel 2015 ho fatto alcune date in duo con un batterista.
+								</p>
+							</div>
+						</li>
+						 <li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Crescita personale
+							<div class="popup compact">
+								<p>
+								Sto proseguendo da anni un percorso di automiglioramento, partendo inizialmente da una condizione di sedentariet&agrave: sul piano alimentare, sportivo (mi alleno almeno tre volte a settimana) e psicologico (percorso con un terapeuta, <a href="https://en.wikipedia.org/wiki/Research_on_meditation">meditazione</a>).
+								</p>
+							</div>
+						</li>
+						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
+							Grafica
+							<div class="popup compact">
+								<p>
+								  Da poco meno di un anno ho iniziato a interessarmi al campo della grafica, in senso lato: dal disegno a mano libera alla computer grafica, con Inkscape (ho messo in atto le mie competenze elementari nella creazione del curriculum). Per il mio corso di studi si &egrave inoltre reso quasi necessario imparare l'uso di Latex; so pertanto costruire documenti a molti file, con inserimento di formule, tabelle, immagini. Ho studiato per mia iniziativa le basi di html, css e javascript, .
+								</p>
+							</div>
+						</li>
+					</ul>
+           
+
+					<div style="clear:both"></div>
+					
+				</div>
+				<!-- CLOSE esperienze -->
+				
+			</div>
 
 				<div id="sidebar">
 					<ul>

@@ -1,8 +1,39 @@
 
 console.log("load popup_header.js");
 
+
+
+function popup(popParent) {
+
+
+  // TODO 
+	//popupAnimation(popParent);
+
+
+
+  popParent.parentElement.parentElement.parentElement.getElementsByClassName("popup-container")[0].style.visibility = "visible";
+  
+
+
+  popParent.parentElement.parentElement.parentElement.getElementsByClassName("popup-container")[0].innerHTML =  popParent.getElementsByClassName("popup")[0].innerHTML;
+}
+
+
+
+function popout(popParent) {
+  
+	/*console.log("popout " + popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].nodeName);
+
+  popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].style.visibility = "hidden";
+  */
+
+}
+
+
+
+
 function popupAnimation(popParent) {
-  var popContainer = popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0];
+  var popContainer = popParent.parentElement.parentElement.parentElement.getElementsByClassName("popup-container")[0];
 
 	popContainer.style.width = "0px";
 	popContainer.style.height = "0px";
@@ -37,34 +68,4 @@ function popupAnimation(popParent) {
 
 
 }
-
-
-function popup(popParent) {
-
-
-  // TODO 
-	//popupAnimation(popParent);
-
-
-
-  popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].style.visibility = "visible";
-  
-
-
-  popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].innerHTML =  popParent.getElementsByClassName("popup")[0].innerHTML;
-}
-
-
-
-function popout(popParent) {
-  
-	/*console.log("popout " + popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].nodeName);
-
-  popParent.parentElement.parentElement.getElementsByClassName("popup-container")[0].style.visibility = "hidden";
-  */
-
-}
-
-
-
 
