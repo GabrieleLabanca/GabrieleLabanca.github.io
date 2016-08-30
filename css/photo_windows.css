@@ -2,7 +2,10 @@
 /* 1 - colors
  * 2 - font
  * 3 - dimensions and positions
- *
+ */
+
+
+
 
 
 /* * * * * * * *
@@ -30,18 +33,69 @@ body {
 /* * * * * * * * * * * * * * * *
  * 3- Dimensions and positions *
  * * * * * * * * * * * * * * * */
+body, div, a, ul, li, p, img, h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+	padding: 0px;
+}
+
 body {
 	width: 100%;
 	background: lightgrey;
+}
+
+.container {
+	margin: auto;
+	width:80%;
+	background: darkgrey;
 }
 
 header { 	
 	width: 
 }
 
+/* .menu */
+.menu {
+  width: 100%;
+}
+
+.menu ul {
+	list-style-type: none;
+}
+
+.menu a {
+	width: 33.333%;
+	width: calc( 80% /3 );
+	padding: calc( 20% /6 );
+	float: left;
+	background: orange;	
+
+	text-decoration: none;
+}
+
+.menu a:hover {
+  background: red;
+}
+
+
+/* #content */
 #content {
 	margin: auto;
-	width: 80%;
+	width: 100%;
 	background: lightgreen;
 }
+
+#content p {
+	padding: 1%;
+	background: lightblue;
+}
+
+#content ul {
+	list-style: none;
+	list-style-type: circle;
+}
+
+#content ul li {
+	margin-left: 3%;
+}
+
 
