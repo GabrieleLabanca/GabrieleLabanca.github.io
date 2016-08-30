@@ -1,0 +1,47 @@
+/* INDEX */
+/* 1 - colors
+ * 2 - font
+ * 3 - dimensions and positions
+ *
+
+
+/* * * * * * * *
+ * 1 - Colors  *
+ * * * * * * * */
+root {
+
+
+
+
+
+
+}
+
+
+
+/* * * * * * *
+ * 2 - Font  *
+ * * * * * * */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* * * * * * * * * * * * * * * *
+ * 3- Dimensions and positions *
+ * * * * * * * * * * * * * * * */
+body {
+	width: 100%;
+	background: lightgrey;
+}
+
+header { 	
+	width: 
+}
+
+#content {
+	margin: auto;
+	width: 80%;
+	background: lightgreen;
+}
+
