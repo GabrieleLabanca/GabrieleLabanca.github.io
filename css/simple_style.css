@@ -1,0 +1,163 @@
+/* INDEX */
+/* 1 - colors
+ * 2 - dimensions and positions
+ * 3 - style
+ * 4 - behaviour
+ */
+
+
+
+/* * * * * * * *
+ * 1 - COLORS  *
+ * * * * * * * */
+:root {
+	--col-bkg:  white;
+	--col-txt:  #0A1306;
+	--col-spec: #39871d;
+	--col-hig:  #D1732B;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * *
+ * 2 - DIMENSIONS and POSITION *
+ * * * * * * * * * * * * * * * */
+
+body, div, a, ul, li, p, img, h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+	padding: 0px;
+}
+
+#header {
+	width: 100%;
+}
+
+#header h1 {
+	width: 80%;
+	margin: auto;
+}
+
+#abstract {
+	width: 60%;
+	margin: auto;
+	text-align: center;
+}
+
+#michiamo {
+	width: auto;
+	margin: auto;
+}
+
+.menu * {
+	width: calc(80% /3);
+	padding: calc(20% /6);
+	float: left;
+}
+
+.container {
+	width: 85%;
+	margin: auto;
+	padding: 2.5%;
+}
+
+.click-content, .popup-container {
+	width: 45%;
+	padding: 2.5%;
+	float: left;
+}
+
+.click-content {
+	display: none;
+}
+
+.click-content {
+	height: 70%;
+}
+
+div.blank {
+	height: 10%;
+}
+
+#footer {
+	height: 10px;
+	width: 100%;
+	background-color: var(--col-txt);
+	position: fixed;
+  bottom: 0;
+}
+
+
+/* * * * * * * 
+ * 3 - STYLE *
+ * * * * * * */
+body {
+	background-color: var(--col-bkg);
+	color: var(--col-txt);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+body b, body a {
+	color: var(--col-spec);
+}
+
+body ul {
+	list-style: circle;
+	text-indent: 2%;
+	list-style-position: inside;
+}
+
+
+
+#header {
+	background-color: var(--col-spec);
+	color: var(--col-bkg);
+}
+
+#michiamo b, #chelavoro b {
+	color: var(--col-hig);
+}
+
+#michiamo {
+	font-size: 25px;
+}
+
+
+#abstract p {
+	padding: 1%;
+}
+
+.menu {
+	color: var(--col-hig);
+	text-align: center;
+}
+
+.click-content h3 {
+	color: var(--col-spec);
+}
+
+.popup-container {
+	font-size: 15px;
+}
+
+
+
+/* * * * * * * * *
+ * 4 - BEHAVIOUR *
+ * * * * * * * * */
+.informations, .popup {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+

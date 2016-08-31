@@ -3,7 +3,7 @@
 	<head>
 
 		<title>Gabriele Labanca</title>
-		<link rel="stylesheet" type="text/css" href="css/photo_windows.css">
+		<link rel="stylesheet" type="text/css" href="css/simple_style.css">
 
     <script src="script/popup_header.js"></script>
     <script src="script/clickup_header.js"></script>
@@ -17,27 +17,22 @@
 
 
 
+		<div id="header">
+			<h1>Gabriele Labanca</h1>
+	  </div>
+
+				<div style="clear:both"></div>
 		<div id="main">
 			<div class="container">
 				
-				<div id="header">
-					<div id="logo">
-						<h1>Gabriele Labanca</h1>
-					</div>
 
-					<div id="tagline">
-						<h3></h3>
-					</div>
-			  </div>
-
-				<div style="clear:both"></div>
 					
 				
 
 				<div id="abstract">
-					<img src="images/scogliera.jpg"></img>
 					<p id="michiamo">
-					Mi chiamo Gabriele Labanca, sono uno <b>studente di Fisica</b> all'Universit&agrave di Padova. Cerco un <b>lavoro part-time</b> a Torino, dove proseguir&ograve gli studi.
+					<b>Studente di Fisica</b> all'Universit&agrave di Padova. <br>
+					Cerco un <b>lavoro part-time</b> a Torino.
 					</p> 
 
 					<p id="contatti">
@@ -58,20 +53,24 @@
 				<div style="clear:both"></div>
 
 				<div class="menu">
-					<ul>
-						<li id="istruzione-button" class="photo-button" onmousedown="clickup(this,'istruzione')" onmouseover="opacityUp(this)" onmouseout="opacityDown(this)">
-							<img src="images/istruzione.jpg" class="opacity-img"></img>
-							<h2>Istruzione</h2>
-						</li>
-						<li id="competenze-button" class="photo-button" onmousedown="clickup(this,'competenze')" onmouseover="opacityUp(this)" onmouseout="opacityDown(this)">
-							<img src="images/competenze.jpg" class="opacity-img"></img>
-							<h2>Competenze</h2>
-						</li>
-						<li id="esperienze-button" class="photo-button" onmousedown="clickup(this,'esperienze')" onmouseover="opacityUp(this)" onmouseout="opacityDown(this)">
-							<img src="images/esperienze.jpg" class="opacity-img"></img>
-							<h2>Esperienze</h2>
-						</li>
-					</ul>
+					<h2 class="colButton" 
+							onmousedown="clickup(this,'istruzione')"
+							onmouseover="colorsUp(this)"
+							onmouseout="colorsDown(this)">
+						Istruzione
+					</h2>
+					<h2 class="colButton" 
+				 			onmousedown="clickup(this,'competenze')"
+				     	onmouseover="colorsUp(this)"
+						 	onmouseout="colorsDown(this)">
+						Competenze
+					</h2>
+					<h2 class="colButton" 
+				 			onmousedown="clickup(this,'esperienze')" 
+							onmouseover="colorsUp(this)"
+						 	onmouseout="colorsDown(this)">
+						Esperienze
+					</h2>
 				</div>
 
 
@@ -85,7 +84,6 @@
 
 					<!-- OPEN istruzione -->
 					<div id="istruzione" class="informations">
-						<h2>Istruzione</h2>
 						<ul class="">
 							<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
 								Diploma di maturit&agrave classica 
@@ -103,7 +101,7 @@
 									<p>
 								 	 	<i>2013 - settembre 2016</i><br>
 								  	Universit&agrave degli Studi, Padova <br>
-										Tesi: <a href="contents/Gabriele_Labanca_TesiTriennale.pdf" download style="font-style-italic">Studio di sistema di monitoring di un laser di calibrazione per il rivelatore iTOP a Belle II</a> con il prof. Stefano Lacaprara e il dott. Alessandro Mord&agrave. <br>
+										Tesi: <a href="contents/Gabriele_Labanca_TesiTriennale.pdf" download style="font-style-italic">Studio di sistema di monitoring di un laser di calibrazione per il rivelatore iTOP a Belle II</a> con il dott. Stefano Lacaprara e il dott. Alessandro Mord&agrave. <br>
 										Corsi facoltativi: Campi elettromagnetici, Programmazione a oggetti e C++, Metodi computazionali per la Fisica.
                  	</p>
 						  	</div>
@@ -116,14 +114,17 @@
 
 				<!-- OPEN competenze -->
 				<div id="competenze" class="informations">
-					<h2>Competenze</h2>
 					<h3>Competenze scientifiche</h3>
 					<ul class="clearlist bulletlist">
 						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
 					    Fisica
 							<div class="popup compact">
 								<p>
-								  Fisica classica: meccanica, meccanica analitica, elettromagnetismo, basi di fluidodinamica e ottica; formalismo quantistico: funzioni d'onda, operatori, cenni sulla teoria della misura.
+									<ul>
+										<li>Fisica classica: meccanica, meccanica analitica, elettromagnetismo, basi di fluidodinamica e ottica</li>
+										<li>Relativit&agrave speciale e formalismo covariante</li>
+										<li>Formalismo quantistico: funzioni d'onda, operatori, cenni sulla teoria della misura</li>
+									</ul>
 								</p>
 							</div>
 						</li>
@@ -131,7 +132,15 @@
 					    Matematica
 							<div class="popup compact">
 								<p>
-								  Le competenze necessarie per il corso di studi in Fisica: analisi reale e complessa, geometria analitica, matematica statistica, trasformazioni di Fourier, meccaniche lagrangiana ed hamiltoniana, spazi di Hilbert.
+								  Le competenze necessarie per il corso di studi in Fisica:
+									<ul>
+										<li>analisi reale e complessa</li>
+										<li>geometria analitica</li>
+										<li>matematica statistica</li>
+										<li>trasformazioni di Fourier</li>
+										<li>meccaniche lagrangiana ed hamiltoniana</li>
+										<li>spazi di Hilbert</li>
+									</ul>
 							 </p>
 							</div>
 						</li>
@@ -230,7 +239,6 @@
 				
 				<!-- OPEN esperienze -->
 				<div id="esperienze" class="informations">
-					<h2>Esperienze</h2>
 					<h3>Attivit&agrave scolastiche</h3>
 					<ul class="clearlist bulletlist">
 						<li class="popup-parent" onmouseover="popup(this)" onmouseout="popout(this)">
@@ -330,7 +338,7 @@
 							Grafica
 							<div class="popup compact">
 								<p>
-								  Da poco meno di un anno ho iniziato a interessarmi al campo della grafica, in senso lato: dal disegno a mano libera alla computer grafica, con Inkscape (ho messo in atto le mie competenze elementari nella creazione del curriculum). Per il mio corso di studi si &egrave inoltre reso quasi necessario imparare l'uso di Latex; so pertanto costruire documenti a molti file, con inserimento di formule, tabelle, immagini. Ho studiato per mia iniziativa le basi di html, css e javascript, .
+								  Dal 2016 ho iniziato a interessarmi al campo della grafica, in senso lato: dal disegno a mano libera alla computer grafica, con Inkscape (ho messo in atto le mie competenze elementari nella creazione del curriculum). Per il mio corso di studi si &egrave inoltre reso quasi necessario imparare l'uso di Latex; so pertanto costruire documenti a molti file, con inserimento di formule, tabelle, immagini. Ho studiato per mia iniziativa le basi di html, css e javascript, .
 								</p>
 							</div>
 						</li>
@@ -352,7 +360,10 @@
 			
 			</div>
 		</div>
-		
+	
+		<div class="blank"></div>
+
+
 		<div id="footer">
 			
 			<div class="container">
