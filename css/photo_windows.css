@@ -2,7 +2,8 @@
 /* 1 - colors
  * 2 - font
  * 3 - dimensions and positions
- * 4 - behaviour
+ * 4 - style
+ * 5 - behaviour
  */
 
 
@@ -12,10 +13,12 @@
 /* * * * * * * *
  * 1 - Colors  *
  * * * * * * * */
-root {
+:root {
 
 
-
+	/* images blended with 241f16ff*/
+  --col-bkg:     rgb(36,31,22);
+  --col-bkg-header:   rgb(56,36,1);
 
 
 
@@ -41,7 +44,7 @@ body, div, a, ul, li, p, img, h1, h2, h3, h4, h5, h6 {
 
 body {
 	width: 100%;
-	background: lightgrey;
+	background: var(--col-bkg);
 }
 
 .container {
@@ -71,7 +74,8 @@ body {
 }
 
 .photo-button {
-position: relative;
+	position: relative;
+	background: var(--col-bkg);
 }
 
 .photo-button img {
@@ -100,12 +104,41 @@ position: relative;
 #abstract {
 	margin: auto;
 	width: 100%;
-	background: lightgrey;
+}
+
+#abstract img {
+	width: 100%;
+	background-repeat: none;
+	position: relative;
 }
 
 #abstract p {
   padding: 1%;
-	background: lightblue;
+	position: absolute;
+	padding: 1%;
+}
+
+#michiamo {
+	top: 15%;
+	left: 28%;
+	width: 40%;
+}
+
+#contatti {
+	top: 35%;
+	left: 36%;
+}
+
+#chelavoro {
+	top: 55%;
+	left: 28%;
+	width: 40%;
+}
+
+#cosaoffro {
+	top: 75%;
+	left: 28%;
+	width: 40%;
 }
 
 /*#content*/
@@ -148,15 +181,33 @@ position: relative;
 
 
 
+/* * * * * * *
+ * 4 - Style *
+ * * * * * * */
+
+#header {
+	background: var(--col-bkg-header);
+}
+
+#abstract p {
+	background: rgba(255,255,255,0.5);
+}
+
+
+
+
+
 
 
 /* * * * * * * * *
- * 4 - Behaviour *
+ * 5 - Behaviour *
  * * * * * * * * */
 
 .popup-parent .popup {
 	display: none;
 }
+
+
 
 
 
