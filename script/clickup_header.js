@@ -3,8 +3,8 @@ var activeButton = [0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 var col_bkg  = "#ffffff";
 var col_txt  = "#0A1306"
-var col_spec = "#39871d";
-var col_hig  = "#D1732B";
+var col_spec = "#1E3799"; //39871d";
+var col_hig  = "#E88A17"; /*D1732B";*/
 
 
 function clickup(clickElement,idString) {
