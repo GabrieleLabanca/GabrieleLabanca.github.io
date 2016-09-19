@@ -94,7 +94,7 @@ div.blank {
 body {
 	background-color: var(--col-bkg);
 	color: var(--col-txt);
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
 	font-size: 18px;
 	line-height: 1.6;
 }
