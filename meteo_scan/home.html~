@@ -1,0 +1,11 @@
+<! DOCTYPE html>
+<html lang="it">
+  <head>
+		<title>Meteo Scan</title>
+		<link rel="stylesheet" type="text/css" href="css/simple_style.css">
+		<script src="script/read_API.js"></script>
+	</head>
+
+	<body>
+		
+	</body>

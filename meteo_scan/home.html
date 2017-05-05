@@ -1,0 +1,18 @@
+<! DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meteo Scan</title>
+    <link rel="stylesheet" type="text/css" href="css/simple_style.css">
+    <!--include it from the Google CDN (Content Delivery Network) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/read_API.js"></script>
+  </head>
+
+  <body>
+    <par id="temp_par"> </par>
+    <par id="status_par"></par>
+    <par id="rstate_par"></par>
+    <button type="button" onclick="get_URL(to_URL,print_status)">geturl</button> 
+    <button type="button" onclick="print_temperature()">printtemp</button>
+    <button type="button" onclick="get_URL(file_url,print_status)">printfilex</button>
+  </body>
