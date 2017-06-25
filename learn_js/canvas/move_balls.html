@@ -1,0 +1,51 @@
+<canvas id="gc" width="400" height="400"></canvas>
+<script>
+window.onload=function() {
+  canv=document.getElementById("gc");
+  ctx=canv.getContext("2d");
+
+  gs=tc=20;
+  px=10;
+  py=5;
+  xv=yv=1;//./Math.sqrt(2);
+
+  //get_v();
+
+  setInterval(move_ball,1000/15);
+}
+function move_ball()
+{
+  px+=xv;
+  py+=yv;
+  if(px==0 || px==tc-1) {
+    xv=-xv;
+  }
+  if(py==0 || py==tc-1) {
+    yv=-yv;
+  }
+
+ 
+  ctx.fillStyle="black";
+  ctx.fillRect(0,0,canv.width,canv.height);
+
+  ctx.fillStyle="red";
+  ctx.fillRect(px*gs, py*gs,gs-2,gs-2);
+
+
+
+
+}
+
+function get_v()
+{
+  xv=Math.floor(Math.random());
+  yv=Math.floor(Math.random());
+  modul = Math.sqrt(xv*xv+yv*yv);
+  xv/=modul;  
+  yv/=modul;
+}
+
+
+
+
+</script>
