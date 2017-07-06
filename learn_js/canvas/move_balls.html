@@ -2,14 +2,12 @@
 <script>
 window.onload=function() {
   canv=document.getElementById("gc");
-  ctx=canv.getContext("2d");
+  ctx=canv.getContext("2d"); // ctx is the canvas object
 
-  gs=tc=20;
-  px=10;
-  py=5;
-  xv=yv=1;//./Math.sqrt(2);
-
-  //get_v();
+  gs=tc=20; // todo
+  px=10;    //position of point: x
+  py=5;     //                   y
+  xv=yv=1;  //velocity
 
   setInterval(move_ball,1000/15);
 }
@@ -35,7 +33,7 @@ function move_ball()
 
 
 }
-
+/*
 function get_v()
 {
   xv=Math.floor(Math.random());
@@ -44,6 +42,7 @@ function get_v()
   xv/=modul;  
   yv/=modul;
 }
+*/
 
 
 
