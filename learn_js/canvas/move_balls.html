@@ -1,41 +1,61 @@
+<head>
+  <meta charset="utf-8">
+</head>
 <canvas id="gc" width="400" height="400"></canvas>
 <script>
 window.onload=function() {
   canv=document.getElementById("gc");
-  ctx=canv.getContext("2d");
+  ctx=canv.getContext("2d"); // ctx is the canvas object
 
-  gs=tc=20;
-  px=10;
-  py=5;
-  xv=yv=1;//./Math.sqrt(2);
+  gs=tc=20; // todo understand
 
-  //get_v();
+  var px = [2,10,3,5];
+  var py = [10,10,3,7];
+  n = px.length;
+  var v0 = 1;
+  var vx = [v0,-1,v0/2.,-v0,0/3];
+  var vy = [0,0./2.,v0,-v0/2.,0.1];
 
-  setInterval(move_ball,1000/15);
-}
-function move_ball()
-{
-  px+=xv;
-  py+=yv;
-  if(px==0 || px==tc-1) {
-    xv=-xv;
-  }
-  if(py==0 || py==tc-1) {
-    yv=-yv;
-  }
-
+  var bunch = [px,py,vx,vy];
  
+  setInterval(move_ball,1000/15,bunch);
+}
+function move_ball(bunch)
+{
+  var px = bunch[0];
+  var py = bunch[1];
+  var vx = bunch[2];
+  var vy = bunch[3];
+  for(i=0;i<n;i++){
+    px[i]+=vx[i];
+    py[i]+=vy[i];
+    if(px[i]==0 || px[i]==tc-1) {
+      vx[i]=-vx[i];
+    }
+    if(py[i]==0 || py[i]==tc-1) {
+      vy[i]=-vy[i];
+    }
+    for(j=i;j<n;j++){
+      if(j!=i){
+        if(px[i]==px[j] && py[i]==py[j]){
+          console.log("touch!");
+          vx[i]=-vx[i];
+          vy[i]=-vy[i];
+        }
+      }
+    }
+  }
+
   ctx.fillStyle="black";
   ctx.fillRect(0,0,canv.width,canv.height);
 
-  ctx.fillStyle="red";
-  ctx.fillRect(px*gs, py*gs,gs-2,gs-2);
-
-
-
-
+  var cols = ["red","green","blue","yellow"];
+  for(i=0;i<n;++i){
+    ctx.fillStyle=cols[i%4];
+    ctx.fillRect(px[i]*gs, py[i]*gs,gs-2,gs-2);
+  }
 }
-
+/*
 function get_v()
 {
   xv=Math.floor(Math.random());
@@ -44,6 +64,7 @@ function get_v()
   xv/=modul;  
   yv/=modul;
 }
+  */
 
 
 
