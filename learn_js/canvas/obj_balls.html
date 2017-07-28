@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en">
+<head> <meta charset="utf-8"> </meta> </head>
+<body>
+<canvas id="gc" width="400" height="400"></canvas>
+<script>
+
+var Arrow = function(x,y){
+	this.x = x;
+	this.y = y;
+	this.length = 2;
+	this.get = function (i) {
+		if(i===0)      {return this.x;}
+		else if(i===1) {return this.y;}
+	} 
+	this.set = function (i,val) {
+		if(i===0)      {this.x = val;}
+		else if(i===1) {this.y = val;}
+	}
+	this.sum = function (otherArrow,k){
+		this.x += k*otherArrow.x;
+		this.y += k*otherArrow.y;
+	}
+	this.rho = function () {
+		return Math.sqrt(this.x*this.x+this.y*this.y);
+	}
+	this.theta = function () {
+		return Math.tan(this.y/this.x);
+	}
+}
+
+function sumArrows(A1,A2,k){ //returns Arrow with components=a+k*b
+	var A3 = new Arrow(A1.x+k*A2.x, A1.y+k*A2.y);
+	return A3;
+}
+
+var Ball = function(rx,ry,vx,vy,clr,size){
+	this.r = new Arrow(rx,ry);
+	this.v = new Arrow(vx,vy);
+	this.clr = clr;
+	this.store_clr = clr;
+	this.size = size;
+	this.getr = function () { return r;}
+	this.getv = function () { return v;}
+	this.setr = function (newr) { r = newr; }
+	this.setv = function (newv) { v = newv; }
+	this.update = function (limit) {
+		this.clr = this.store_clr; //restores original color
+		for(i=0; i<this.r.length; ++i) {
+			var temp = this.r.get(i) + this.v.get(i);
+			if(temp>limit || temp<0 || this.collision===true){ 
+				this.v.set(i,-this.v.get(i)); 
+				this.clr = "white";
+				this.collision=false;
+			}
+		}
+		this.r.sum(this.v,1);
+	}
+	this.collision = false;
+	this.collide = function (otherball) {
+		
+		var diff = sumArrows(otherball.r,this.r,-1); //pointing from this to other
+		if(diff.rho()===0){//(this.size+otherball.size)){
+			this.collision = true;
+			otherball.collision = true;
+			
+		}
+		/*if(this.v.theta() < diff.theta()+5 && this.v.theta() > diff.theta()-5){
+			if(this.v.rho() >= diff.rho()){
+				//this.collision = true;
+				//otherball.collision = true;
+			}
+		}*/
+	}
+}
+
+window.onload=function() {
+  canv=document.getElementById("gc");
+  ctx=canv.getContext("2d"); // ctx is the canvas object
+
+  size=20; // gs is ball size, tc is 400/gc
+ 
+ 	v0 = 1;
+ 	var bunch = [];
+  bunch.push(new Ball(7,5,v0,3*v0,"red"));
+  bunch.push(new Ball(2,5,v0,2*0,"blue"));
+  bunch.push(new Ball(3,3,-v0,v0,"green"));
+  bunch.push(new Ball(2,10,-v0*2,v0*3,"yellow"));
+  bunch.push(new Ball(2,5,-v0,v0,"orange"));
+  bunch.push(new Ball(1,9,2*v0,3*v0,"red"));
+  bunch.push(new Ball(7,3,-v0,2*0,"blue"));
+  bunch.push(new Ball(5,3,-v0,-v0,"green"));
+  bunch.push(new Ball(2,1,-v0*2,2*v0,"yellow"));
+  bunch.push(new Ball(2,6,-v0,v0,"orange"));
+
+
+  //var bunch = [redb,blub,grnb,yllb];
+
+  setInterval(move_ball,1000/5,bunch,size,ctx);
+}
+
+
+function move_ball(bunch,size,ctx)
+{
+	limit = ctx.canvas.height/size;
+	for(var b in bunch){
+		for(var bb in bunch){
+			if(bb != b) {bunch[b].collide(bunch[bb]);}
+		}
+
+		bunch[b].update(limit); 
+	}
+
+	paint_canvas(bunch,size,ctx);
+}
+
+
+
+function paint_canvas(bunch,size,ctx){
+  ctx.fillStyle="black";
+  ctx.fillRect(0,0,canv.width,canv.height);
+
+	for(var b in bunch){
+		var B = bunch[b];
+		ctx.fillStyle=B.clr;
+		ctx.fillRect(B.r.x*size,B.r.y*size,size-2,size-2);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body></html>
