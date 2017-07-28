@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><body>
+<canvas id="gc" width="400" height="400"></canvas>
+<script>
+
+var myO = function(a,b){
+	this.A = a;
+	this.B = b;
+	this.operation = function(n) { return (n*(this.A+this.B)); }
+	this.hidden = function(n) { console.log(n*this.A*this.B);}
+}
+
+var Arrow = function(x,y){
+	this.x = x;
+	this.y = y;
+	this.get = function (i) {
+		if(i===0)      {return this.x;}
+		else if(i===1) {return this.y;}
+	} 
+	this.set = function (i,val) {
+		if(i===0)      {this.x = val;}
+		else if(i===1) {this.y = val;}
+	}
+	this.sum = function (otherArrow,k){
+		this.x += k*otherArrow.x;
+		this.y += k*otherArrow.y;
+	}
+	this.rho = function () {
+		return Math.sqrt(this.x*this.x+this.y*this.y);
+	}
+	this.theta = function () {
+		return Math.tan(this.y/this.x);
+	}
+}
+
+window.onload=function() {
+  canv=document.getElementById("gc");
+  ctx=canv.getContext("2d"); // ctx is the canvas object
+
+  var OO = new myO(1,2);
+  console.log(typeof OO.operation);
+  console.log(typeof OO.hidden);
+
+  var A = new Arrow(1,23);
+  var B = new Arrow(2,2);
+	A.set(1,24+A.get(1));
+  console.log(A.get(1));
+
+}
+
+
+
+
+</script>
+</body></html>
