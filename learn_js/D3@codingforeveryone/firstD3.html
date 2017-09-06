@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+	  <script type="text/javascript" src="d3.min.js"></script>
+    <!--<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>-->
+</head>
+<body>
+		<div id="showdata"></div>
+    <div id="viz"></div>
+    <script type="text/javascript">
+
+
+
+
+	  var dataset = [17,9,5,6,2,22];
+
+    d3.select("#showdata").selectAll("p")
+    .data(dataset)
+    .enter()
+    .append("p")
+    .text(function(d){return d;});
+
+
+
+    var sampleSVG = d3.select("#viz")
+      .append("svg")
+      .attr("width", 1000)
+      .attr("height", 1000);    
+
+    /*sampleSVG.append("circle")
+      .style("stroke", "gray")
+      .style("fill", "white")
+      .attr("r", 40)
+      .attr("cx", 50)
+      .attr("cy", 50)
+      .on("mouseover", function(){d3.select(this).style("fill", "black");})
+      .on("mouseout", function(){d3.select(this).style("fill", "white");});
+  
+    /*sampleSVG.append("rect")
+    	.style("stroke","black")
+    	.style("fill","gray")
+    	.attr("x",200)
+    	.attr("y",200)
+    	.attr("height",100)
+    	.attr("width",100);
+    var xScale = d3.scale.linear()
+    	.domain([0,20])
+    	.range([0,100]);
+*/
+
+  
+   
+
+
+    for(i=0; i<dataset.length; ++i){
+    	sampleSVG.append("rect")
+    	.style("stroke","black")
+    	.style("fill","gray")
+    	.attr("x",50+i*100)
+    	.attr("y",200)
+    	.attr("height",dataset[i])
+    	.attr("width",100);
+    }
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>
