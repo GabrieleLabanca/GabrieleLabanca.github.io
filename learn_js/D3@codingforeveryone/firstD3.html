@@ -9,64 +9,75 @@
 		<div id="showdata"></div>
     <div id="viz"></div>
     <script type="text/javascript">
+	 	  var dataset = [{
+		  	w: 17,
+	  		h: 9,
+	  		text: 'uno',
+	  		col: 'red',
+	  		index: 0
+	  	},{
+		  		w: 5,
+		  	h: 4,
+	  		text: 'due',
+	  		col: 'blue',
+		  	index: 1
+		  },{
+	  		w: 6,
+	  		h: 12,
+		  	text: 'tre',
+		  	col: 'green',
+	  		index: 2	
+		  },{
+		  	w: 2,
+	  		h: 22,
+	  		text: 'quattro',
+		  	col: 'orange',
+		  	index: 3
+	 	 }];	
 
 
 
-
-	  var dataset = [17,9,5,6,2,22];
-
-    d3.select("#showdata").selectAll("p")
+	 	 d3.select("#showdata").selectAll("p")
     .data(dataset)
     .enter()
     .append("p")
-    .text(function(d){return d;});
+    .text(function(d){return d.text;});
 
-
+    var scale =  function(num,alpha){return num*alpha;}
 
     var sampleSVG = d3.select("#viz")
       .append("svg")
       .attr("width", 1000)
-      .attr("height", 1000);    
+      .attr("height", 1000); 
 
-    /*sampleSVG.append("circle")
-      .style("stroke", "gray")
-      .style("fill", "white")
-      .attr("r", 40)
-      .attr("cx", 50)
-      .attr("cy", 50)
-      .on("mouseover", function(){d3.select(this).style("fill", "black");})
-      .on("mouseout", function(){d3.select(this).style("fill", "white");});
-  
-    /*sampleSVG.append("rect")
-    	.style("stroke","black")
-    	.style("fill","gray")
-    	.attr("x",200)
-    	.attr("y",200)
-    	.attr("height",100)
-    	.attr("width",100);
-    var xScale = d3.scale.linear()
-    	.domain([0,20])
-    	.range([0,100]);
-*/
+window.onload=function() {
+ 	sampleSVG.selectAll("rect")
+   	.data(dataset)
+   	.enter()
+   	.append("rect")
+   	.attr("width",50)//function(d){return scale(d.w,10);})
+   	.attr("height",function(d){ return scale(d.h,10); })
+  	.attr("fill",function(d){return d.col;})
+   	.attr("x",function(d){return d.index*50;})
+   	.attr("y",function(d){return 1000 - d.h*10;});
+  setInterval(animation,1000/15,sampleSVG,dataset);
+}
+    
+function animation(sampleSVG,dataset)
+{
+	for (var i=0; i<dataset.length; i++) {
+		++dataset[i].h;
+	}
+	sampleSVG.selectAll("rect")
+   	.data(dataset)
+   	.transition()
+   	.attr("width",50)//function(d){return scale(d.w,10);})
+   	.attr("height",function(d){ return scale(d.h,10); })
+  	.attr("fill",function(d){return d.col;})
+   	.attr("x",function(d){return d.index*50;})
+   	.attr("y",function(d){return 1000 - d.h*10;});
 
-  
-   
-
-
-    for(i=0; i<dataset.length; ++i){
-    	sampleSVG.append("rect")
-    	.style("stroke","black")
-    	.style("fill","gray")
-    	.attr("x",50+i*100)
-    	.attr("y",200)
-    	.attr("height",dataset[i])
-    	.attr("width",100);
-    }
-
-
-
-
-
+}
 
     
     </script>
