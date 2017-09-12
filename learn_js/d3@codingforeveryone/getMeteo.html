@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+	  <script type="text/javascript" src="d3.min.js"></script>
+    <!--<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>-->
+</head>
+
+<body>
+		<div id="showdata"></div>
+
+    <script>
+			//////////////
+			// DATA RETRIEVAL
+			var mydata;
+			function printJson(jsonp)
+			{
+				mydata = jsonp.list;
+			}
+			window.onload = function() {
+				printMydata();
+			}
+			function printMydata(){
+				console.log(mydata);
+			}
+			var myscript = document.createElement('script');
+			myscript.src = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=36dc108c54b51062033b0e0d8cd81427' + '&callback=printJson';
+			document.getElementsByTagName('body')[0].appendChild(myscript);
+
+
+
+			/////////////
+			// APPENDING DATA
+			var svg_width = 1000;
+			var svg_height = 1000;
+			var mysvg = d3.select("#showdata")
+			  .append("svg")
+			  .attr("width", svg_width)
+      	.attr("height", svg_height);
+
+				window.onload=function() {
+
+					 	mysvg.selectAll("rect")
+   						.data(mydata)
+   						.enter()
+   						.append("rect")
+   						.attr("width",50)
+   						.attr("height",function(d){ return d.main.temp; })
+  						.attr("fill",function(d){return "grey";})
+   						.attr("x",function(d){return mydata.indexOf(d)*50;})
+   						.attr("y",function(d){return svg_height - d.main.temp;});
+  					//TODO setInterval(animation,1000/15,sampleSVG,dataset);
+				}
+
+
+
+
+
+
+
+
+
+
+
+  	</script>
+
+</body>
+</html>
