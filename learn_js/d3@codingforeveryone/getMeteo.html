@@ -60,6 +60,7 @@ window.onload=function() {
     .attr("x",function(d){return mydata.indexOf(d)*bin_w;})
     .attr("y",function(d){return svg_height - (d.main.temp-250)*3.5;});
 
+
   mysvg.selectAll("circle")
     .data(mydata)
     .enter()
@@ -67,7 +68,13 @@ window.onload=function() {
     .attr("cx",function(d){ return (0.5+mydata.indexOf(d))*bin_w; })
     .attr("cy",function(d){ return svg_height - d.wind.speed*10; })
     .attr("r",5);
-  
+ 
+  mysvg.selectAll("rect")
+    .on('mouseover',function(d){ d3.select(this).attr('stroke','yellow'); })
+    .on('mouseout',function(d){d3.select(this).attr('stroke',this.fill); })
+    .on('click',function(d){ d3.select(this).attr('fill','red');});
+
+
   //TODO setInterval(animation,1000/15,sampleSVG,dataset);
 }
 
