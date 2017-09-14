@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--<script type="text/javascript" src="d3.js"></script>-->
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+</head>
+
+<body>
+		
+  <div id="showdata"></div>
+  <script>
+    
+
+var svgWidth = 400;
+var svgHeight = 400;
+var mysvg = d3.select("body")
+  .append("svg")
+  .attr("width",svgWidth)
+  .attr("height",svgHeight);
+
+var pi = Math.PI;
+        
+function arc(dat){
+  return d3.svg.arc()
+    .innerRadius(dat.ir)
+    .outerRadius(dat.or)
+    .startAngle(dat.sa)
+    .endAngle(dat.ea);
+}
+      
+mysvg   
+  .selectAll("path")
+  .data(mydata)
+  .enter()
+  .append("path")
+  .attr("d", arc(dat))
+  .attr("fill", "red")
+  .attr("transform", "translate(200,200)");
+
+var mydata = [{
+      ir: 100,
+      or: 200,
+      sa: 0,
+      ea: 1
+  }];
+      
+  
+  </script>
+  
+</body>
+</html>

@@ -7,50 +7,69 @@
 </head>
 
 <body>
-		<div id="showdata"></div>
+  <div id="showdata"></div>
 
-    <script>
-			//////////////
-			// DATA RETRIEVAL
-			var mydata;
-			function printJson(jsonp)
-			{
-				mydata = jsonp.list;
-			}
-			window.onload = function() {
-				printMydata();
-			}
-			function printMydata(){
-				console.log(mydata);
-			}
-			var myscript = document.createElement('script');
-			myscript.src = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=36dc108c54b51062033b0e0d8cd81427' + '&callback=printJson';
-			document.getElementsByTagName('body')[0].appendChild(myscript);
+  <script>
+  //////////////
+  // DATA RETRIEVAL
+var mydata;
+function printJson(jsonp)
+{
+	mydata = jsonp.list;
+}
+window.onload = function() {
+	printMydata();
+}
+function printMydata(){
+	console.log(mydata);
+}
+var myscript = document.createElement('script');
+myscript.src = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=36dc108c54b51062033b0e0d8cd81427' + '&callback=printJson';
+document.getElementsByTagName('body')[0].appendChild(myscript);
 
+/////////////
+// APPENDING DATA
+var svg_width = 1500;
+var svg_height = 300;
+var mysvg = d3.select("#showdata")
+  .append("svg")
+  .attr("width", svg_width)
+  .attr("height", svg_height);
 
+var bin_w = 30;
+window.onload=function() {
+  mysvg.selectAll("rect")
+    .data(mydata)
+    .enter()
+    .append("rect")
+    .attr("width",bin_w)
+    .attr("height",function(d){ return (d.main.temp-250)*3.5; })
+    .attr("fill",
+      function(d){
+        var h =  d.dt_txt.slice(11,13);
+        if(h=='00') return      '#050e18';
+        else if(h=='03') return '#0e2a46';
+        else if(h=='06') return '#164574';
+        else if(h=='09') return '#1f61a3';
+        else if(h=='12') return '#287cd1';
+        else if(h=='15') return '#1f61a3';
+        else if(h=='18') return '#164574';
+        else if(h=='21') return '#0e2a46';
+        else return '#000000';
+      })
+    .attr("x",function(d){return mydata.indexOf(d)*bin_w;})
+    .attr("y",function(d){return svg_height - (d.main.temp-250)*3.5;});
 
-			/////////////
-			// APPENDING DATA
-			var svg_width = 1000;
-			var svg_height = 1000;
-			var mysvg = d3.select("#showdata")
-			  .append("svg")
-			  .attr("width", svg_width)
-      	.attr("height", svg_height);
-
-				window.onload=function() {
-
-					 	mysvg.selectAll("rect")
-   						.data(mydata)
-   						.enter()
-   						.append("rect")
-   						.attr("width",50)
-   						.attr("height",function(d){ return d.main.temp; })
-  						.attr("fill",function(d){return "grey";})
-   						.attr("x",function(d){return mydata.indexOf(d)*50;})
-   						.attr("y",function(d){return svg_height - d.main.temp;});
-  					//TODO setInterval(animation,1000/15,sampleSVG,dataset);
-				}
+  mysvg.selectAll("circle")
+    .data(mydata)
+    .enter()
+    .append("circle")
+    .attr("cx",function(d){ return (0.5+mydata.indexOf(d))*bin_w; })
+    .attr("cy",function(d){ return svg_height - d.wind.speed*10; })
+    .attr("r",5);
+  
+  //TODO setInterval(animation,1000/15,sampleSVG,dataset);
+}
 
 
 
