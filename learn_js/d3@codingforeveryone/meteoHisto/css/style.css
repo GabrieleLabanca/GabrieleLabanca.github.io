@@ -1,0 +1,7 @@
+#spt > p{
+background-color: ;
+  color: black;
+}
+#spt > p::first-letter{
+  color: orange;
+}
