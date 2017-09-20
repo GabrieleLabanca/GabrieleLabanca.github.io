@@ -21,7 +21,8 @@ var bin_w = 30;
     .attr("fill",
       function(d){ return colors.get('blueE'); })
     .attr("x",function(d){return mydata.indexOf(d)*bin_w;})
-    .attr("y",function(d){return svg_height - (d.main.temp-250)*3.5;});
+    .attr("y",function(d){return svg_height - (d.main.temp-250)*3.5;})
+    ;//.text(function(d){ return d.dt_txt.slice(11,13); };
 
 
 }

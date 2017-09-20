@@ -48,16 +48,20 @@ mysvg.selectAll("rect")
     .on('mouseover',function(d){ d3.select(this).attr('stroke',colors.get('blueE')); })
     .on('mouseout',function(d){ d3.select(this).attr('stroke',this.fill); })
     .on('click',function(d){
-      var temporary = d.main.temp;
-      //console.log("temporary var");
-      //console.log(temporary);
-        
-      
-      d3.selectAll('rect').attr('fill',function(t){ return t.col; });
-      d3.select(this)
-        .attr('fill',colors.get('blueE'));
+      var temporaryT = d.main.temp;
+      d.main.temp = -250;
+      //d3.selectAll('rect').attr('fill',function(t){ return t.col; });
+      //d3.select(this).attr('fill',colors.get('blueE'));
       d3.select('#spt')
-        .text(function(/*d is already defined*/){ return d.main.temp; });
+         .text(temporaryT); 
+      var t = d3.transition().duration(750).ease(d3.easeCubic);
+      d3.selectAll('rect')
+        .data(mydata)
+        .transition(t)
+        .attr("height",function(d){ return (d.main.temp-250)*3.5; });
+        
+        
+      d.main.temp = temporaryT;
       
        });
 
