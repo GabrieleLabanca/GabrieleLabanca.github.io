@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-	  <meta charset="utf-8">
-	  <script type="text/javascript" src="d3.min.js"></script>
+  <head>
+    <style>
+      .svgc {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+
+    </style>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="d3.min.js"></script>
     <!--<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>-->
-</head>
-<body>
-  <div id="mysvg"></div>
+  </head>
+  <body>
+    <div class="svgc" id="svg1"></div>
+    <div class="svgc" id="svg2"></div>
 
-  <script type="text/javascript">
-    var mydata = [{ 
-      w: 100,
-      h: 200,
-      col: 'green',
-      a: 'a text',
-      b: 'b text'
-    }];
+    <script type="text/javascript">
+var mydata = [{
+  w: 100,
+  h: 200,
+  col: 'green',
+  a: 'a text',
+  b: 'b text',
+  index: 1
+}];
 
-  var mysvg = d3.select('#mysvg')
-    .append('svg')
-    .attr('width',500).attr('height',500);
+var svg1 = d3.select('#svg1')
+  .append('svg')
+  .attr('width',500).attr('height',500);
 
-  mysvg.selectAll('rect')
-    .data(mydata)
-    .enter()
-    .append('rect')
-    .attr("width",function(d){return d.w;})
-    .attr("height",function(d){ return d.h; })
-    .attr("fill",function(d){return d.col;})
-    .attr("x",250)//function(d){return d.index*50;})
-    .attr("y",250)//function(d){return 1000 - d.h*10;})
-    .data(mydata)
-    .enter()
-    .append('rect')
-    .attr("width",function(d){return d.w;})
-    .attr("height",function(d){ return d.h/2.; })
-    .attr("fill",function(d){return 'red';})
-    .attr("x",200)//function(d){return d.index*50;})
-    .attr("y",200);//function(d){return 1000 - d.h*10;})
+  svg1.selectAll('rect')
+  .data(mydata)
+  .enter()
+  .append('rect')
+  .attr("width",function(d){return d.w;})
+  .attr("height",function(d){ return d.h; })
+  .attr("fill",function(d){return d.col;})
+  .attr("x",function(d){return d.index*50;})
+  .attr("y",function(d){return 500 - d.h;});
 
-        
+  var svg2 = d3.select('#svg2')
+  .append('svg')
+  .attr('width',500).attr('height',500);
 
-
-
-
-
-
-
+  svg2.selectAll('rect')
+  .data(mydata)
+  .enter()
+  .append('rect')
+  .attr("width",function(d){return d.w;})
+  .attr("height",function(d){ return d.h/2.; })
+  .attr("fill",function(d){return 'red';})
+  .attr("x",function(d){return d.index*50;})
+  .attr("y",function(d){return 500 - d.h/2;});
 
 
-  </script>
-</body>
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
 </html>

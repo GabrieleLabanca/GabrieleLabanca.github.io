@@ -1,7 +1,13 @@
-#spt > p{
-background-color: ;
+#spt {
+  background-color:;
   color: black;
+  height: 50px;
 }
 #spt > p::first-letter{
-  color: orange;
+}
+
+.tempSvg {
+  position: absolute;
+  left: 10px;
+  top: 50px;
 }

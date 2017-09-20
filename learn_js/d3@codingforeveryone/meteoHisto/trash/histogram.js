@@ -1,3 +1,5 @@
+function main() {
+
 
 var svg_width = 1500;
 var svg_height = 200;
@@ -8,7 +10,8 @@ var mysvg = d3.select("#showdata")
 
 var bin_w = 30;
 
-window.onload=function() {
+
+ 
   mysvg.selectAll("rect")
     .data(mydata)
     .enter()
@@ -32,6 +35,17 @@ window.onload=function() {
     .attr("x",function(d){return mydata.indexOf(d)*bin_w;})
     .attr("y",function(d){return svg_height - (d.main.temp-250)*3.5;});
 
+   // TODO sovrapporre altra canvas sotto, con quello che voglio!
+  mysvg.selectAll('rect')
+    .data(copy_md)
+    .enter()
+    .append("rect")
+    .attr("width",bin_w)
+    .attr("height",function(d){ return (d.main.temp-250)*2.5; })
+    .attr("fill", function(d){ return colors.get('blueE'); })
+    .attr("x",function(d){return mydata.indexOf(d)*bin_w;})
+    .attr("y",function(d){return 0;}); //svg_height - (d.main.temp-250)*3.5;});
+
 
 mysvg.selectAll("circle")
     .data(mydata)
@@ -48,7 +62,9 @@ mysvg.selectAll("rect")
         d3.selectAll('rect').attr('fill',function(t){ return t.col; });
         d3.select(this)
           .attr('fill',colors.get('blueE'));
-        d3.select('#spt').append('p').text("banana");//function(/*d is already defined*/){ return d.main.temp; });
+        d3.select('#spt')
+          .append('p')
+          .text(function(/*d is already defined*/){ return d.main.temp; });
        });
 
 }

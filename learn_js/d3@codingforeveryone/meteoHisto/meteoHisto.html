@@ -7,13 +7,16 @@
 </head>
 
 <body>
-  <div id="showdata"></div>
+  <!-- the class is to superimpose two canvases -->
+  <div class="tempSvg" id="foreTemp" style="z-index:4"></div>
+  <div class="tempSvg" id="backTemp" style="z-index:3"></div>
   <div id="spt">  </div>
 
   <script type="text/javascript" src="../d3.min.js"></script>
   <script type="text/javascript" src="js/colors.js"></script>
+  <script type="text/javascript" src="js/foreTemp.js"></script>
+  <script type="text/javascript" src="js/backTemp.js"></script>
   <script type="text/javascript" src="js/getData.js"></script>
-  <script type="text/javascript" src="js/histogram.js"></script>
   <!--<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script> -->
 </body>
 </html>
