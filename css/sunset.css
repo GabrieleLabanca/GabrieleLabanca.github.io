@@ -1,0 +1,68 @@
+/* TODO A LOT! */
+
+/* INDEX */
+/* 1 - colors
+ * 2 - dimensions and positions
+ * 3 - style
+ * 4 - behaviour
+ *  */
+
+
+
+/* * * * * * * *
+ *  * 1 - COLORS  *
+ *   * * * * * * * */
+:root {
+  --col-bkg:  white;
+
+  --col-lit:  #c0ccdf;
+  --col-mid:  #4c6894;
+  --col-drk:  #30425e;
+
+  --col-txt:  #30425e;
+  --col-spec: #4c6894;
+
+  --col-hig:  #bb2100;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * *
+ *  * 2 - DIMENSIONS and POSITION *
+ *   * * * * * * * * * * * * * * * */
+
+
+/* * * * * * * 
+ *
+ *  * 3 - STYLE *
+ *   * * * * * * */
+body, #body {
+  background-color: var(--col-lit);
+  /*color: var(--col-txt);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;*/
+}
+
+body ul {
+  /*list-style: circle;
+  text-indent: -2%;
+  list-style-position: inside;*/
+}
+
+#header, #logo {
+  background-color: var(--col-mid);
+  color: white;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: var(--col-hig);
+}
+
+
+/* * * * * * * * *
+ *  * 4 - BEHAVIOUR *
+ *   * * * * * * * * */
+
+
