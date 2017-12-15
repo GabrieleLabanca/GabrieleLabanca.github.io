@@ -5,7 +5,6 @@ window.onload=function() {
   height = svg.attr("height");
 
   var color = d3.scaleOrdinal(d3.schemeCategory10);
-  console.log(d3.schemeCategory10);
 
   var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
@@ -37,6 +36,10 @@ window.onload=function() {
     node.append("title")
       .text(function(d) { return d.id; });
 
+    simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
     simulation.force("link")
       .links(graph.links);
 
@@ -67,7 +70,6 @@ window.onload=function() {
 
   function dragended(d) 
   {
-    console.log(d);
     var target_url;
     if(d.url === undefined) target_url = "https://duckduckgo.com/?q="+d.id;
     else target_url = d.url; 
