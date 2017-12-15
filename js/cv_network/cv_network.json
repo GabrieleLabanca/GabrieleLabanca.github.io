@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {"id": "H--gg", "group": "c++", "url": "https://github.com/GabrieleLabanca/Bachelor-thesis---Belle2"}, 
+    {"id": "A Life's Game", "group": "js", "url": "https://github.com/GabrieleLabanca/alifesgame"},
+    {"id": "Pesatura_Arnie", "group": "arduino", "url": "https://github.com/GabrieleLabanca/Pesatura_Arnie"},
+    {"id": "Tesi triennale", "group": "root", "url": "https://github.com/GabrieleLabanca/Bachelor-thesis---Belle2"},
+    {"id": "Cavour", "group": "istruzione"},
+    {"id": "unipd", "group": "istruzione"},
+    {"id": "unito", "group": "istruzione"}
+  ],
+
+  "links": [
+    {"source": "H--gg", "target": "unito", "value": 1},
+    {"source": "unipd", "target": "unito", "value": 1},
+    {"source": "unipd", "target": "Tesi triennale", "value": 1},
+    {"source": "Cavour", "target": "unipd", "value": 1}
+  ]
+}

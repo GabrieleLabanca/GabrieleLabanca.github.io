@@ -13,9 +13,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Awesome fonts (icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- D3 library -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="">
+    <!-- cv_network -->
+    <script src="js/cv_network/cv_network.js"></script>
+
+    <style>
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+    </style>
   </head>
+
   <body id="body">
     <div id="main" class="container">
       <div class="container">
@@ -23,32 +41,40 @@
           <div class="" id="logo">
             <h1>Gabriele Labanca <small>sito personale</small></h1>
           </div>
-            <div class="text-info">(in costruzione)</div>
-            <div style="clear:both"></div>
-            <div id="menu">
-              <ul>
-              </ul>
-            </div>
-            <div style="clear:both"></div>
+          <div class="text-info">(in costruzione)</div>
+          <div style="clear:both"></div>
+          <div id="menu">
+            <ul>
+            </ul>
+          </div>
+          <div style="clear:both"></div>
         </div>
 
         <div id="content">
-          <p class="lead">
-          Benvenuto/a sul mio sito!
-          Sono uno studente di Fisica Teorica all'Universit&agrave di Torino.
-          Sto cercando lavoro in ambito scientifico computazionale, qui si trova il mio <a href="curriculum/contents/curriculum_Generico/Labanca_Gabriele_curriculum.pdf" download>curriculum</a>. 
-          </p>
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="lead">
+              Benvenuto/a sul mio sito!
+              Sono uno studente di Fisica Teorica all'Universit&agrave di Torino.
+              Sto cercando lavoro in ambito scientifico computazionale, qui si trova il mio <a href="curriculum/contents/curriculum_Generico/Labanca_Gabriele_curriculum.pdf" download>curriculum</a>. 
+              </p>
 
-          <p>
-          Il mondo della programmazione mi entusiasma, al punto che mi piacerebbe che faccia parte del mio lavoro. Qui sotto i progetti di cui mi sono occupato (alcuni sono work in progress):
-          <ul>
-            <li>un <a href="https://github.com/GabrieleLabanca/H--gg">progetto universitario di fisica computazionale</a></li>
-            <!--<li>una visualizzazione interattiva delle previsioni <a href="learn_js/d3@codingforeveryone/meteoHisto/meteoHisto.html">meteorologiche</a> <i class="fa fa-hourglass-2"></i></li>-->
-            <li><a href="https://gabrielelabanca.github.io/alifesgame">
-                <i>A Lifes' Game</i></a>, modello preda-predatore ad agenti <i class="fa fa-hourglass-2"></i></li>                     
-            <li>un progetto di monitoraggio elettronico per l'apicoltura, sviluppato con il <a href="http://www.sermig.org/">Sermig</a>: <a href="https://github.com/GabrieleLabanca/Pesatura_Arnie">Pesatura_Arnie</a> <i class="fa fa-hourglass-2"></i>
-          </ul>
-          </p>
+              <p>
+              Il mondo della programmazione mi entusiasma, al punto che mi piacerebbe che faccia parte del mio lavoro. Qui sotto i progetti di cui mi sono occupato (alcuni sono work in progress):
+              <ul>
+                <li>un <a href="https://github.com/GabrieleLabanca/H--gg">progetto universitario di fisica computazionale</a></li>
+                <!--<li>una visualizzazione interattiva delle previsioni <a href="learn_js/d3@codingforeveryone/meteoHisto/meteoHisto.html">meteorologiche</a> <i class="fa fa-hourglass-2"></i></li>-->
+                <li><a href="https://gabrielelabanca.github.io/alifesgame">
+                    <i>A Lifes' Game</i></a>, modello preda-predatore ad agenti <i class="fa fa-hourglass-2"></i></li>                     
+                <li>un progetto di monitoraggio elettronico per l'apicoltura, sviluppato con il <a href="http://www.sermig.org/">Sermig</a>: <a href="https://github.com/GabrieleLabanca/Pesatura_Arnie">Pesatura_Arnie</a> <i class="fa fa-hourglass-2"></i>
+              </ul>
+              </p>
+            </div>
+            <div class="col-sm-6" >
+              <p> Visualizzazione grafica dei miei progetti. Ispirato da https://bl.ocks.org/mbostock/4062045</p>
+              <svg id="cv_net_svg" width="300" height="300"></svg>
+            </div>
+          </div>
 
           <p>
           <h5>Siti consigliati</h5>
