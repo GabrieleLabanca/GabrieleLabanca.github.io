@@ -1,5 +1,8 @@
 window.onload=function() {
 
+
+
+
   var svg = d3.select("#cv_net_svg");
   var width = svg.attr("width"),
   height = svg.attr("height");
@@ -16,29 +19,32 @@ window.onload=function() {
 
     var link = svg.append("g")
       .attr("class", "links")
-      .selectAll("line")
+      .selectAll(".link")
       .data(graph.links)
       .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
 
     var node = svg.append("g")
       .attr("class", "nodes")
-      .selectAll("circle")
+      .selectAll(".node")
       .data(graph.nodes)
-      .enter().append("circle")
+      .enter().append("g")
+      .append("circle")
       .attr("r", function(d){ if(d.r === undefined) return 5; else return d.r; })
       .attr("fill", function(d) { return color(group_to_color(d.group)); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended))
-      .append("title")
-      .text(function(d) { return d.id; })
+          .on("end", dragended));
+    var text = svg.append("g")
+      .attr("class", "labels")
+      .selectAll(".node")
+      .data(graph.nodes)
+      .enter().append("g")
       .append("text")
-      .attr("dx", 10)
+      .attr("dx", 12)
       .attr("dy", ".35em")
-      .text(function(d) { return d.id; })
-      .style("stroke", "black");
+      .text(function(d) { return d.id });
 
     simulation
       .nodes(graph.nodes)
@@ -46,7 +52,6 @@ window.onload=function() {
 
     simulation.force("link")
       .links(graph.links);
-
 
     function ticked() {
       link
@@ -67,11 +72,15 @@ window.onload=function() {
       })
       .attr("y", function (d) {
         return d.y;
-      });
+      }); 
 
-      node
+      /*node
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
+        text
+        .attr("x", function(d) { return d.x; })
+        .attr("y", function(d) { return d.y; });*/
+
     }
   });
 
@@ -107,3 +116,4 @@ window.onload=function() {
 
 
 } // closes window.onload
+
