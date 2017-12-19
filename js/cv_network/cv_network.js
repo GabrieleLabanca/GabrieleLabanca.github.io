@@ -1,7 +1,4 @@
-window.onload=function() {
-
-
-
+function cv_network_main() {
 
   var svg = d3.select("#cv_net_svg");
   var width = svg.attr("width"),

@@ -22,6 +22,14 @@
     <!-- blog -->
     <script src="js/blog/blog.js"></script>
 
+    <script>
+// call main functions to avoid redefinition of window.onload
+window.onload=function(){
+  cv_network_main();
+  blog_main(); 
+}
+    </script>
+
     <style>
 
 .links line {
@@ -55,15 +63,15 @@
           </div>
           <div style="clear:both"></div>
         </div>
-              <div class="col-sm-4">
-<p> Visualizzazione grafica dei miei progetti. Ispirato da https://bl.ocks.org/mbostock/4062045</p>
-        <svg id="cv_net_svg" width="300" height="300"></svg>
-      </div>
+        <div class="col-sm-4">
+          <p> Visualizzazione grafica dei miei progetti. Ispirato da https://bl.ocks.org/mbostock/4062045</p>
+          <svg id="cv_net_svg" width="300" height="300"></svg>
+        </div>
 
       </div>
 
       <div id="content">
-        
+
         <div class="row">
           <div class="col-sm-6">
             <p class="lead">
@@ -85,9 +93,9 @@
           </div>
           <div class="col-sm-6">
             <button id="random_article">random article</button>
-            <button>archive</button> <!-- TODO -->
+            <button id="archive">archive</button>       
             <p id="article_display">
-            
+
             </p> 
           </div>
         </div>

@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "date": "171219",
+      "category": "meta",
+      "tags": ["welcome"],
+      "title": "primo_articolo"
+    },
+    {
+      "id": "2",
+      "date": "171219",
+      "category": "meta",
+      "tags": ["welcome"],
+      "title": "primo_articolo"
+    }
+  ]
+}
+
