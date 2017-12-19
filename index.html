@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="">
     <!-- cv_network -->
     <script src="js/cv_network/cv_network.js"></script>
+    <!-- blog -->
+    <script src="js/blog/blog.js"></script>
 
     <style>
 
@@ -33,7 +35,7 @@
 }
 
 .node text {
-    font: 9px helvetica;
+  font: 9px helvetica;
 }
     </style>
   </head>
@@ -41,7 +43,7 @@
   <body id="body">
     <div id="main" class="container">
       <div class="container">
-        <div class="jumbotron" id="header">
+        <div class="jumbotron col-sm-8" id="header">
           <div class="" id="logo">
             <h1>Gabriele Labanca <small>sito personale</small></h1>
           </div>
@@ -53,58 +55,68 @@
           </div>
           <div style="clear:both"></div>
         </div>
-
-        <div id="content">
-          <div class="row">
-            <div class="col-sm-6">
-              <p class="lead">
-              Benvenuto/a sul mio sito!
-              Sono uno studente di Fisica Teorica all'Universit&agrave di Torino.
-              Sto cercando lavoro in ambito scientifico computazionale, qui si trova il mio <a href="curriculum/contents/curriculum_Generico/Labanca_Gabriele_curriculum.pdf" download>curriculum</a>. 
-              </p>
-
-              <p>
-              Il mondo della programmazione mi entusiasma, al punto che mi piacerebbe che faccia parte del mio lavoro. Qui sotto i progetti di cui mi sono occupato (alcuni sono work in progress):
-              <ul>
-                <li>un <a href="https://github.com/GabrieleLabanca/H--gg">progetto universitario di fisica computazionale</a></li>
-                <!--<li>una visualizzazione interattiva delle previsioni <a href="learn_js/d3@codingforeveryone/meteoHisto/meteoHisto.html">meteorologiche</a> <i class="fa fa-hourglass-2"></i></li>-->
-                <li><a href="https://gabrielelabanca.github.io/alifesgame">
-                    <i>A Lifes' Game</i></a>, modello preda-predatore ad agenti <i class="fa fa-hourglass-2"></i></li>                     
-                <li>un progetto di monitoraggio elettronico per l'apicoltura, sviluppato con il <a href="http://www.sermig.org/">Sermig</a>: <a href="https://github.com/GabrieleLabanca/Pesatura_Arnie">Pesatura_Arnie</a> <i class="fa fa-hourglass-2"></i>
-              </ul>
-              </p>
-            </div>
-            <div class="col-sm-6" >
-              <p> Visualizzazione grafica dei miei progetti. Ispirato da https://bl.ocks.org/mbostock/4062045</p>
-              <svg id="cv_net_svg" width="500" height="300"></svg>
-            </div>
-          </div>
-
-          <p>
-          <h5>Siti consigliati</h5>
-          <ul>
-            <li>
-              <a href="https://inknos.github.io/">Nicola Sella</a> amico e compagno di avventure informatiche
-            </li>
-            <li>
-              <a href="https://github.com/f-forcher">Francesco Forcher</a> uno dei colleghi di universit&agrave più esperti che conosca rispetto alle tecnologie informatiche (e a cui sono debitore di parecchie consulenze)
-            </li>
-            <li>
-              <a href="http://turnintocoders.it/it/">Turn into Coders</a> 
-            </li>
-          </ul>
-
-          </p>
-
-        </div> 
-
-        <div id="sidebar">
-          <ul>
-          </ul>
-        </div>
-        <div style="clear:both"></div>
+              <div class="col-sm-4">
+<p> Visualizzazione grafica dei miei progetti. Ispirato da https://bl.ocks.org/mbostock/4062045</p>
+        <svg id="cv_net_svg" width="300" height="300"></svg>
+      </div>
 
       </div>
+
+      <div id="content">
+        
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="lead">
+            Benvenuto/a sul mio sito!
+            Sono uno studente di Fisica Teorica all'Universit&agrave di Torino.
+            Sto cercando lavoro in ambito scientifico computazionale, qui si trova il mio <a href="curriculum/contents/curriculum_Generico/Labanca_Gabriele_curriculum.pdf" download>curriculum</a>. 
+            </p>
+
+            <p>
+            Il mondo della programmazione mi entusiasma, al punto che mi piacerebbe che faccia parte del mio lavoro. Qui sotto i progetti di cui mi sono occupato (alcuni sono work in progress):
+            <ul>
+              <li>un <a href="https://github.com/GabrieleLabanca/H--gg">progetto universitario di fisica computazionale</a></li>
+              <!--<li>una visualizzazione interattiva delle previsioni <a href="learn_js/d3@codingforeveryone/meteoHisto/meteoHisto.html">meteorologiche</a> <i class="fa fa-hourglass-2"></i></li>-->
+              <li><a href="https://gabrielelabanca.github.io/alifesgame">
+                  <i>A Lifes' Game</i></a>, modello preda-predatore ad agenti <i class="fa fa-hourglass-2"></i></li>                     
+              <li>un progetto di monitoraggio elettronico per l'apicoltura, sviluppato con il <a href="http://www.sermig.org/">Sermig</a>: <a href="https://github.com/GabrieleLabanca/Pesatura_Arnie">Pesatura_Arnie</a> <i class="fa fa-hourglass-2"></i>
+            </ul>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <button id="random_article">random article</button>
+            <button>archive</button> <!-- TODO -->
+            <p id="article_display">
+            
+            </p> 
+          </div>
+        </div>
+
+        <p>
+        <h5>Siti consigliati</h5>
+        <ul>
+          <li>
+            <a href="https://inknos.github.io/">Nicola Sella</a> amico e compagno di avventure informatiche
+          </li>
+          <li>
+            <a href="https://github.com/f-forcher">Francesco Forcher</a> uno dei colleghi di universit&agrave più esperti che conosca rispetto alle tecnologie informatiche (e a cui sono debitore di parecchie consulenze)
+          </li>
+          <li>
+            <a href="http://turnintocoders.it/it/">Turn into Coders</a> 
+          </li>
+        </ul>
+
+        </p>
+
+      </div> 
+
+      <div id="sidebar">
+        <ul>
+        </ul>
+      </div>
+      <div style="clear:both"></div>
+
+    </div>
     </div>
 
     <div id="footer" class="clearfix">
