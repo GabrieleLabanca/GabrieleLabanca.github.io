@@ -15,8 +15,12 @@ function blog_main(){
   });
 
   $('#random_article').click(function(){
+    var rnd_url = get_article_url(random_article(mycat));
+    console.log(rnd_url);
     $('#article_display').load("blog/archive/2018/test.html");
   });
+
+
   function display_last(){
     var last_url = get_article_url(last_article(mycat));
     $('#article_display').load(last_url);
@@ -26,6 +30,38 @@ function blog_main(){
     var N = cat.articles.length;
     return cat.articles[N-1];
   }
+
+  function random_article(cat){
+    if( typeof random_article.list == 'undefined' ) {
+      random_article.list = [];
+      var N = cat.articles.length;
+      var is_good;
+      for(var i=0; i<N; i++){
+        do{
+          is_good = 0;
+          var n = Math.floor(Math.random()*N);
+          for(var j in random_article.list){
+            if(n == random_article.list[j]){
+              is_good++;
+            }
+          }
+        }while(is_good != 0);
+
+        random_article.list.push(n);
+
+      }
+      console.log(random_article.list);
+    }
+    if( typeof random_article.index == 'undefined' ) {
+      random_article.index = -1;
+    }
+      random_article.index += 1;
+    var rnd_indx = random_article.list[random_article.index];
+    if(random_article.index == random_article.list.length-1 ) random_article.index = -1;
+    return cat.articles[rnd_indx];
+  }
+
+
   function get_article_url(art){
     var date = art.date;
     var y = date.slice(0,2);
