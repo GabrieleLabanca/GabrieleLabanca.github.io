@@ -3,10 +3,9 @@ function blog_main(){
   var mycat;
 
   $.getJSON("./blog/archive/catalogue.json", function(json) {
-    console.log(json); // access the response object
     mycat = json;
-
-    display_last();
+    //display_last();
+    display_cover();
   });
 
   $('#archive').click(function(){
@@ -16,10 +15,14 @@ function blog_main(){
 
   $('#random_article').click(function(){
     var rnd_url = get_article_url(random_article(mycat));
-    console.log(rnd_url);
-    $('#article_display').load("blog/archive/2018/test.html");
+    $('#article_display').load(rnd_url);
   });
 
+
+  function display_cover(){
+    //var last_url = get_article_url(last_article(mycat));
+    $('#article_display').load("blog/archive/2017/12/23_programmatico.html");
+  }
 
   function display_last(){
     var last_url = get_article_url(last_article(mycat));
