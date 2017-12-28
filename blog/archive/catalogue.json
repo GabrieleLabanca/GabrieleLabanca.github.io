@@ -13,6 +13,13 @@
       "category": "meta",
       "tags": ["welcome","program"],
       "title": "programmatico"
+    },
+    {
+      "id": "3",
+      "date": "171228",
+      "category": "ambiente",
+      "tags": ["ambiente","bicicletta"],
+      "title": "torino_tersa"
     }
   ]
 }

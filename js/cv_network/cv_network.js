@@ -8,7 +8,7 @@ function cv_network_main() {
 
   var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody())
+    .force("charge", d3.forceManyBody().strength(function(){ return -7; }))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   d3.json("js/cv_network/cv_network.json", function(error, graph) {
@@ -33,6 +33,7 @@ function cv_network_main() {
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
+
     var text = svg.append("g")
       .attr("class", "labels")
       .selectAll(".node")

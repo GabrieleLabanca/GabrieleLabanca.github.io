@@ -1,6 +1,7 @@
 
 function blog_main(){
   var mycat;
+  var current_url;
 
   $.getJSON("./blog/archive/catalogue.json", function(json) {
     mycat = json;
@@ -14,19 +15,23 @@ function blog_main(){
   });
 
   $('#random_article').click(function(){
-    var rnd_url = get_article_url(random_article(mycat));
-    $('#article_display').load(rnd_url);
+    current_url = get_article_url(random_article(mycat));
+    $('#article_display').load(current_url);
   });
 
+  $('#new_page').click(function(){
+    window.open(current_url);    
+  });
 
   function display_cover(){
     //var last_url = get_article_url(last_article(mycat));
-    $('#article_display').load("blog/archive/2017/12/23_programmatico.html");
+    current_url = "blog/archive/2017/12/23_programmatico.html";
+    $('#article_display').load(current_url);
   }
 
   function display_last(){
-    var last_url = get_article_url(last_article(mycat));
-    $('#article_display').load(last_url);
+    current_url = get_article_url(last_article(mycat));
+    $('#article_display').load(current_url);
   }
 
   function last_article(cat){
@@ -58,7 +63,7 @@ function blog_main(){
     if( typeof random_article.index == 'undefined' ) {
       random_article.index = -1;
     }
-      random_article.index += 1;
+    random_article.index += 1;
     var rnd_indx = random_article.list[random_article.index];
     if(random_article.index == random_article.list.length-1 ) random_article.index = -1;
     return cat.articles[rnd_indx];

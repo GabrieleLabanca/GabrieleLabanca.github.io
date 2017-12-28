@@ -1,0 +1,34 @@
+var data_smog_days = [{
+  anno: 2006,
+  superamenti: 183
+},{
+anno: 2007,
+superamenti: 145
+},{
+anno: 2008,
+superamenti: 114,
+},{
+anno: 2009,
+superamenti: 116,
+},{
+anno: 2010,
+superamenti: 97,
+},{
+anno: 2011,
+superamenti: 125,
+},{
+anno: 2012,
+superamenti: 99,
+},{
+anno: 2013,
+superamenti: 96,
+},{
+anno: 2014,
+superamenti: 67,
+},{
+anno: 2015,
+superamenti: 83,
+},{
+anno: 2016,
+superamenti: 68,
+}];
