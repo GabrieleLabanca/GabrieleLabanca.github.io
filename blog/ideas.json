@@ -5,6 +5,36 @@
       "description":"",
       "tags":[]
     },
+    { "title":"Alternative handwriting and shortand systems",
+      "link":"http://www.alysion.org/handy/althandwriting.htm",
+      "description":"",
+      "tags":["shorthand","handwriting"]
+    },
+    { "title":"Synergie",
+      "link":"https://www.synergie-italia.it/synergie/synergie-lavora-con-noi",
+      "description":"",
+      "tags":["lavoro","informatica"]
+    },
+    { "title":"Stimulate",
+      "link":"http://www.stimulate-ejd.eu/",
+      "description":"consorzio di dottorati in quantitative science, simulation, data analysis",
+      "tags":["dottorato","europa","datascience","qcd","fluiddynamics","biology","ricerca"]
+    },
+    { "title":"Draw from imagination",
+      "link":"https://www.sketchbook.com/blog/how-to-draw-from-imagination-freehand-perspective-and-drawing-in-3d/",
+      "description":"tutorial di Monika Zagrobelna",
+      "tags":["disegno","prospettiva","immaginazione"]
+    },
+    { "title":"Death by prof. Kagan",
+      "link":"https://oyc.yale.edu/death/phil-176",
+      "description":"corso di filosofia sul concetto di morte",
+      "tags":["filosofia","morte","esistenza","sensodellavita"]
+    },
+    { "title":"Language is a Virus",
+      "link":"http://www.languageisavirus.com/index.php",
+      "description":"prompts to writing creativity",
+      "tags":["creativita","scrivere","serendipity","letteratura","scrittore"]
+    },
     { "title":"wecity",
       "link":"http://maps.wecity.it",
       "description":"classifica citta' ciclabili",
