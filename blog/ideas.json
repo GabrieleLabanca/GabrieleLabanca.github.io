@@ -5,6 +5,61 @@
       "description":"",
       "tags":[]
     },
+    { "title":"Progetti urban farming",
+      "link":"http://www.ehabitat.it/2017/12/24/fattorie-urbane-6-progetti-di-urban-farming-per-sfamare-il-mondo/",
+      "description":"catalogo di 6 urban farming projects",
+        "tags":["citta","innovazione","fattoria","palestina","indianapolis","telaviv","detroit","chicago"]
+    },
+    { "title":"Jessica Lahey's 'The Gift of Failure'",
+      "link":"https://www.theatlantic.com/education/archive/2015/08/when-success-leads-to-failure/400925/?utm_source=atlfb",
+      "description":"Children lose thir love of learning due to pressure towards grades",
+      "tags":["education","psicologia","scuola","insegnante","studiare","successo","fallimento","giovani","bambini","voto","imparare","apprendere"]
+    },
+        { "title":"7 Techniques to Help Improve Your Memory",
+      "link":"http://2oqz471sa19h3vbwa53m33yj.wpengine.netdna-cdn.com/wp-content/uploads/2017/12/techniques-to-remember-anything.jpg",
+      "description":"from http://www.visualcapitalist.com/7-techniques-to-improve-memory/",
+      "tags":["infographic","memory","loci","chunking"]
+    },
+    { "title":"Tim Dwyer",
+      "link":"http://marvl.infotech.monash.edu/~dwyer/",
+      "description":"My research concerns many different aspects of Information Visualisation and Visual Analytics. In other words, I am interested in visual interfaces for the exploration and communication of data.",
+      "tags":["data","visualinterface","analytics","visual","networks"]
+    },
+    { "title":"Klaus Lackner Is Pulling CO2 Out of Thin Air",
+      "link":"https://www.fastcompany.com/3044272/clearing-the-air",
+      "description":"anionic exchange resin absorbs co2 from air",
+        "tags":["biofuels","algae","carboncycle","stoccaggio","arizonastateuniversity","materiali","resina"]
+    },
+    { "title":"sneaker made from recycled co2",
+      "link":"https://www.fastcompany.com/3063659/the-sole-of-this-sneaker-is-made-from-recycled-co2",
+      "description":"",
+      "tags":["co2","circulareconomy","design","scarpa","riciclo","innovazione"]
+    },
+    { "title":"Climeworks",
+      "link":"http://www.climeworks.com/",
+      "description":"compagnia che toglie co2 dall'aria",
+      "tags":["co2","clima","ambientalismo","green","footprint","improntaecologica","capture","circulareconomy"]
+    },
+    { "title":"Park 20/20",
+      "link":"http://www.park2020.com/en/",
+      "description":"parco industriale sulla base dell'economia circolare",
+      "tags":["circulareconomy","ecologia","green","economia","sprechi","rifiuti","delta","volkerwessels","reggeborgh","mcdonough","sostenibilita","cradletocradle"]
+    },
+    { "title":"Sucking CO2 out of the air",
+      "link":"https://www.fastcompany.com/40421871/this-machine-just-started-sucking-co2-out-of-the-air-to-save-us-from-climate-change?utm_content=buffer68856&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer",
+      "description":"Climeworks carbon capture device will take the gas from the air and sell it or store it in the ground.",
+      "tags":["co2","clima","ambientalismo","green","footprint","improntaecologica","capture","circulareconomy"]
+    },
+    { "title":"L'importanza di educare alle emozioni",
+      "link":"http://www.alleyoop.ilsole24ore.com/2017/12/07/come-ti-senti-limportanza-di-educare-alle-emozioni/?uuid=106_MV41SeCr",
+      "description":"empatia",
+      "tags":["psicologia","empatia","educazione","bambini","racconto","rabbia","metafora"]
+    },
+    { "title":"The global dominance of white people is thanks to the potato",
+      "link":"https://quartzy.qz.com/1148452/potato2/?utm_source=qzfb",
+      "description":"It is certain that without potatoes, Germany could not have become the leading industrial and military power of Europe after 1848, and no less certain that Russia could not have loomed so threateningly on Germany’s eastern border after 1891.",
+      "tags":["storia","economia","popolazioni","alimentazione","migrazioni"]
+    },
     { "title":"Alternative handwriting and shortand systems",
       "link":"http://www.alysion.org/handy/althandwriting.htm",
       "description":"",
