@@ -20,6 +20,13 @@
       "category": "ambiente",
       "tags": ["ambiente","bicicletta"],
       "title": "torino_tersa"
+    },
+    {
+      "id": "4",
+      "date": "180106",
+      "category": "libri",
+      "tags": ["politica","sindacato","lavoro"],
+      "title": "cofferati_a_ciascuno_il_suo_mestiere"
     }
   ]
 }
