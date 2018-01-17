@@ -11,7 +11,7 @@ function blog_main(){
 
   $('#archive').click(function(){
     console.log("archive");
-    window.open("blog/archive")
+    window.open("blog/archive/catalogue.json")
   });
 
   $('#random_article').click(function(){
