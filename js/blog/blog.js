@@ -9,6 +9,8 @@ function blog_main(){
     display_cover();
   });
 
+  console.log("mycat",mycat);
+
   $('#archive').click(function(){
     console.log("archive");
     window.open("blog/archive/catalogue.json")

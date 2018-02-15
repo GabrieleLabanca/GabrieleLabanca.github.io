@@ -34,7 +34,14 @@
       "category": "incontri",
       "tags": ["politica","ambiente","medicina","inceneritore","isde","ricerca"],
       "title": "luisa_memore"
+    },
+    {
+      "id": "6",
+      "date": "180204",
+      "category": "libri",
+      "tags": ["politica","realta","filosofia","psicologia"],
+      "title": "watzlawick_il_codino_del_barone_di_munchhausen"
     }
-]
+  ]
 }
 
