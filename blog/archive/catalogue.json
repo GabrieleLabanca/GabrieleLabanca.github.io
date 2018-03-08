@@ -1,13 +1,6 @@
 {
   "articles": [
     {
-      "id": "1",
-      "date": "171219",
-      "category": "meta",
-      "tags": ["welcome"],
-      "title": "primo_articolo"
-    },
-    {
       "id": "2",
       "date": "171223",
       "category": "meta",
@@ -41,6 +34,13 @@
       "category": "libri",
       "tags": ["politica","realta","filosofia","psicologia"],
       "title": "watzlawick_il_codino_del_barone_di_munchhausen"
+    },    
+    {
+      "id": "7",
+      "date": "180308",
+      "category": "opinione",
+      "tags": ["politica","diversità","femminismo","genere","mondoarabo","cultura"],
+      "title": "unite_le_forze"
     }
   ]
 }
