@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <!-- mobile-view -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <!-- Bootstrap Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -33,7 +34,7 @@ p{
             padding: 10px;
           }
 
-          img.square_img {
+          img.square-img {
             width: 70%;
           }
           img.header-img {
@@ -56,71 +57,86 @@ p{
   <body style="padding:5%;width:100%">
     <div id="main" class="col-sm-12">
       <figure>
-        <img class="header-img" src="http://www.hysytech.com/userfiles/a51eid2c.jpeg" alt="http://www.hysytech.com/userfiles/a51eid2c.jpeg">
-        <figcaption>Alcune foto dei progetti di Hysytech <small>(dal sito www.hysytech.com, gentile concessione di Massimiliano Antonini)</small></figcaption>
+        <img class="header-img" src="img/campo_head.png" alt="campo+satellite">
+        <figcaption>Esempio di visualizzazione<small>(dal sito www.hysytech.com, gentile concessione di Massimiliano Antonini)</small></figcaption>
       </figure>
 
-      <h1>X-Farm</h1>
+      <h1>xFarm</h1>
       <p><small>26 mar 2018</small></p>
       <p>
+      Benvenuto o bentornato che tu sia, sempre ben-qualcosa è, dico io. Unisciti pure agli altri lettori intorno al computer, perché oggi videochiamiamo Matteo Vanotti, di xFarm: come risulta dal nome, si parla di agricoltura e di "fattore X". «Cosa intendi con questo termine?» Ve lo spiego, anzi ce lo spiega Matteo, qua sotto. Prima però vi racconto come l'ho scoperto: fa parte infatti delle startup promosse da <a href="http://i3p.it/">I3P</a>, l'incubatore del Politecnico di Torino.
       </p>
 
       <h2>Presentazione azienda</h2>
       <p>
-      gennaio 2017; sua realtà, formazione
+      Matteo si laurea in ingegneria, ma è anche un piccolo agricoltore. A gennaio 2017 decide di unire queste sue due anime in un unico progetto, xFarm appunto. Il motivo di questo slancio creativo è molto pragmatico: i programmi di gestione pensati per le aziende agricole (riassunti nel sostantivo "gestionali") risultavano complicati da impostare e da utilizzare, risultando inoltre sistemi molto chiusi. La questione va pensata in questi termini: una volta scelto di affidarsi a Tizio-Farm per, poniamo, la gestione del calendario della semina, si scopre che Sempronio-Farm (oltre ad avere un nome più interessante) offre un ottimo database per il magazzino; ora abbiamo due gestionali che non si parlano, quindi dovrò esportare e importare in continuazione i dati che riguardano le scorte di semi in magazzino da S-Farm a T-Farm, per poi trasferirli indietro per aggiornare il magazzino. (Questo chiaramente nell'ipotesi che ogni gestionale abbia qualche funzione che lo rende migliore degli altri.)
+      Già solo a scriverlo, e voi a leggerlo, mi sono annoiato. L'obiettivo di Matteo è creare un gestionale che sia semplice su entrambi i fronti: facilità di utilizzo, configurazione veloce e intuitiva; interfaccia agile tra i dati che riguardano ambiti diversi.
       </p>
       <p>
-      probleam: gestionali complicati
-      </p>
-      <p>
-      obietivo gestionale semplice; risposta + e feedback
-      </p>
+      L'impegno è stato, si può dire, ripagato: la risposta infatti è stata buona (circa 400 aziende stanno utilizzando e testando xFarm dal lancio di ottobre 2017) e anche tra gli agricoltori non nativi digitali, da cui ci si aspetterebbe una minore predisposizione alla gestione da cellulare, la piattaforma è stata ben accettata; anzi, il feedback di questi ultimi ha consentito a Matteo e i suoi collaboratori di migliorare ulteriormente l'<a href="ux">interfaccia con l'utente</a>.
 
       <h2>Modularità</h2>
-      <p>
-      unificare servizi freemium
+      <p id='modularita'>
+      Un buon leader sa delegare: xFarm segue questa idea. Invece di ambire, come nei gestionali tradizionali, alla gestione di ogni singolo aspetto da parte di un unico <i>software</i>, qui l'obiettivo è risultare una <b>piattaforma</b>, ovvero unificare servizi terzi interfacciandoli gli uni con gli altri in formula <a href="#freemium"><i>freemium</i></a>. Restano, chiaramente, funzionalità gestite direttamente da xFarm, come la registrazione dei terreni e la gestione del magazzino.
       </p>
       <p>
-      altre startup (catasto irrig
+      Facciamo qualche esempio: una startup di Napoli ha creato un software che gestisce l'irrigazione ottimizzandola secondo fattori come tipo di coltivazione, periodo dell'anno e altri; ovviamente per un gestionale questa funzionalità è utilissima, quindi invece di sviluppare un sistema analogo xFarm integra il software di questa startup nella propria piattaforma. Il risultato è un gestionale più completo, con l'integrazione automatica dei dati, senza che sia stato necessario dedicare risorse a questo aspetto e per di più sfruttando e incoraggiando una specializzazione in quest'ambito. La stessa cosa è avvenuta con una startup che si è occupata della gestione del catasto.
       </p>
-      <p>
-      enti di ricerca (pestic link=agriprecisione, alert)
+      <p id="entidiricerca">
+      Sono aperte anche collaborazioni con enti di ricerca (i nomi non sono ancora pubblici) che forniscono dati sulle malattie delle piante: questo consente di dosare in modo ottimale i pesticidi e interpretare le condizioni climatiche del campo, avvicinandosi all'ideale <a href="#agriprecisione">agricoltura di precisione</a> grazie all'interpretazione dei dati con modelli di crescita aggiornati e specifici.
       </p>
-      <p>
-      no software
-      </p>
+
+
+      <figure>
+        <img class="square-img" src="img/xsense.png" alt="xsense">
+        <figcaption>xSense, il dispositivo che misura umidità temperatura dell'aria e del suolo, piovosità, umidità foliare, scatta foto (con possibilità di essere utilizzate per l'analisi dati) ed è alimentato da un pannello solare. <small>(gentile concessione di Matteo Vanotti)</small></figcaption>
+      </figure>
 
       <h2>Automazione e sensoristica</h2>
       <p>
-      xsense: plug&play, alert store: facile!
+      Parliamo ora di uno dei fattori decisivi per l'incisività di un gestionale, la caratteristica che fa sì che non sia semplicemente una comodità: la sensoristica. Matteo mi parla di xSense (in foto), il loro dispositivo di monitoring, ovvero di acquisizione dati in tempo reale (ogni 15 minuti). xFarm ha scelto, conformemente alla sua vocazione di essere facile da utilizzare, di renderlo un oggetto <i>plug&play</i>, ovvero di installazione immediata: non va neppure acceso, basta piantarlo nel campo! Questo proliferare di dati ha numerosi utilizzi: il più ovvio è l'osservazione "matematica" delle condizioni del campo nel tempo, ma grazie all'utilizzo di <a href="#entidiricerca">modelli</a> questi dati possono fornire previsioni che consentano misure preventive. 
       </p>
       <p>
-      agri di precisione: mappa di prescrizione, meteo
+      Allo scopo di prevenire, si possono configurare degli allarmi, sotto forma di notifiche su cellulare o computer, che avvertano quando si presentano condizioni di siccità, favorevoli all'insorgere di malattie, o praticamente qualunque condizione possa venire in mente. Ai più attenti sarà chiaro che non è facile scegliere queste condizioni, dato che entrano in gioco numerosi fattori: varietà della coltivazione, stagione, località, peculiarità annuali, clima e altri. Qui nasce l'idea di utilizzare i suddetti modelli per creare un <b>alert store</b> che consenta di includere, con un tasto, degli allarmi già collaudati e suggeriti per la propria coltivazione. Di nuovo, grandi passi verso la facilità di utilizzo.
       </p>
       <p>
-      modulistica: quad di campaga, tutto da telefono
+      Altro modo di utilizzare i dati, complementare agli allarmi, è utilizzarli per regolare gli interventi, idealmente automatizzandoli. Per esempio, si può creare una <i>mappa di prescrizione</i>, ossia una mappa che contenga informazioni sul trattamento da somministrare alle diverse zone del campo (quanto irrigare, cosa seminare, quali e quanti pesticidi spargere, etc.) che può poi essere integrata direttamente con il software che governa i macchinari responsabili dei trattamenti stessi, rientrando appieno nel concetto di <a href="#agriprecisione">agricoltura di precisione</a>.
+      </p>
+      <p id="ux">
+      Uno dei vantaggi più chiari dell'automazione è però la gestione della modulistica, spina del fianco anche in agricoltura. L'applicazione, utilizzando le informazioni inserite dall'utente e integrandole con quelle dei sensori, è in grado di generare un <q>quaderno di campagna</q> che le ordina; quando serve, l'agricoltore può generare, di nuovo in pochissimi passaggi, un documento valido per sbrigare la burocrazia. Una cosa che Massimo ha tenuto a farmi notare è che la direzione coincide con la gestione di ogni aspetto del campo via cellulare, un obiettivo ambizioso, ma che pare avere successo, come già detto sopra, su tutte le categorie di agricoltori.
       </p>
 
       <h2>Sostenibilita</h2>
       <p>
-      2o, fertil,, pestic (link=agriprecisione)
+      «Gab, tutto bello; ma da quando sei appassionato di agricoltura?» Be', ho avuto un orto sul balcone anni fa, come la foto sottostante testimonia. Eppure, la cosa che ha stimolato questo articolo è l'utilizzo che si può fare di questa tecnologia per ridurre l'impatto ambientale delle coltivazioni. Per esempio, Matteo mi cita il problema dell'acqua (ricordiamo la siccità di quest'anno, qui in Piemonte, ma il problema è globale e su scala diversa voglio citare il <a href="https://earthobservatory.nasa.gov/Features/WorldOfChange/aral_sea.php">prosciugamento del lago Aral</a> a causa dell'irrigazione): solitamente viene somministrata molta più acqua del necessario, non avendo dati, e con l'<a href="#agriprecisione">agricoltura di precisione</a>si potrebbe ridurre questo consumo del 30-40%! Anche l'uso di fertilizzanti e pesticidi può essere meglio regolato, per evitare sprechi e inquinamento inutile.
       </p>
       <p>
-      tracciabilità ---- prezzo, garanzia
+      Ultima chicca: l'utilizzo di <a href="#blockchain">blockchain</a> per tracciare i prodotti con caratteristiche particolari. Questa funzionalità è ancora in fase di sviluppo ed è pensata per applicazioni simili alle seguenti: garanzia di provenienza di un prodotto (pensiamo agli scandali riguardanti la falsa provenienza dell'olio d'oliva italiano), certificazione dei metodi di coltivazione (quali fertilizzanti o pesticidi siano stati utilizzati, fino alle certificazioni biologiche), denominazioni di origine controllata (vini, olii, prodotti d'eccellenza in genere). Vantaggi in vista sia per i consumatori, che conoscerebbero dettagliatamente l'origine del prodotto, sia per i produttori, che potrebbero guadagnare di più offrendo prodotti di qualità garantita.
       </p>
 
+      <figure>
+        <img class="square-img" src="img/zucchino.jpg" alt="zucchino">
+        <figcaption>Un giovane, padovano e ignaro sottoscritto, sorridente (a proprio modo) esibendo il frutto del proprio lavoro, successivamente entrato a pieno titolo nel folklore locale.</figcaption>
+      </figure>
 
 
 
       <p>
-      Siamo giunti alla fine di questo breve tour di <a href="http://www.hysytech.com">Hysytech</a>. Spero sia stato un articolo utile per farvi un'idea; quanto a me, ho imparato molte cose e ringrazio ancora Massimiliano per l'opportunità di conoscere dettagliatamente una realtà matura come questa e per il tempo che mi ha dedicato. Solito contatto per commenti, iscrizione a un rudimentale feed per ricevere la notifica di nuovi articoli, o condivisione (perché no?) di <a href="https://youtu.be/b9Pt2qgSqJw">video di gibboni</a>: <span id="email"></span>.
+      Per chi avesse ulteriori dubbi, o una piccola <a href="https://youtu.be/Ygk67WOmkCI">azienda agricola</a>, rimando al sito <a href="http://www.xfarm.ag">http://www.xfarm.ag</a>. Ringrazio intanto Matteo Vanotti della chiacchierata e delle informazioni e risorse che mi ha messo a disposizione: speriamo di avere presto interessanti novità da aggiungere alla lista di funzionalità dell'app! Per consigli, commenti, suggerimenti, opinioni, proposte, punti di vista, idee, ok mi fermo, scrivete a: <span id="email"></span>.
       <br>
-      Link per la condivisione: <a href="https://gabrielelabanca.github.io/blog/archive/2018/03/15/hysytech.html">https://gabrielelabanca.github.io/blog/archive/2018/03/15/hysytech.html</a>.
+      Link per la condivisione: <a href="https://gabrielelabanca.github.io/blog/archive/2018/03/15/xfarm.html">https://gabrielelabanca.github.io/blog/archive/2018/03/15/techfarm.html</a>.
       </p>
 
 
+      <h3>Note</h3>
+      <h4 id="freemium">Freemium</h4>
+      Un'applicazione freemium è gratuita, ma in partenza ha funzionalità ridotte rispetto alla versione completa. Acquisti <i>in-app</i> (all'interno dell'applicazione stessa) consentono di "sbloccare" una o più di queste funzionalità. È un concetto familiare agll utilizzatori di app per smartphone: pensate a quelle che offrono di rimuovere la pubblicità a pagamento, o ai videogiochi che regalano bonus in seguito ad acquisti nel negozio interno. Questa filosofia è simile a quella delle applicazioni che offrono una versione di prova per un periodo limitato prima di essere obbligati a comprarle: se il prodotto viene provato, le probabilità che venga valutato favorevolmente per un acquisto salgono; ma qui si va oltre, considerando che il fatto che un'app sia utilizzata, per quanto con funzionalità limitate, da più persone, facilita la diffusione della stessa, con costi che (immagino) sono inferiori a quelli della pubblicità tradizionale. [<a href="#modularita">torna su</a>]
 
+      <h4 id="agriprecisione">Agricoltura di precisione</h4>
+      ...
 
+      <h4 id="blockchain">Blockchain</h4>
+      Il paradigma blockchain è lo stesso utilizzato per i Bitcoin e le altro criptovalute, ovvero le "monete digitali" che non hanno controparte in soldi comunemente intesi, ma è indipendente da esse. In poche parole, si crea una catena in cui l'aggiunta di nuovi anelli (cioè nuovi pezzi di informazione) è regolata tramite un algoritmo che valida l'inserimento (tramite un cosiddetto <i>hash</i>. Il processo è pubblico, quindi esiste un'unica catena valida di cui tutti hanno una copia. Il processo è complesso e poco intuitivo, ma il concetto è che questa catena non è modificabile, garantendo trasparenza delle informazioni. Per un esempio didattico e qualche informazione più approfondita, vi consiglio https://github.com/matjack1/naivechain di Matteo Giaccone.
 
       <script>
 var user = 'gabrielelabanca',
@@ -142,15 +158,15 @@ function open_home(){window.open("https://gabrielelabanca.github.io/");}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
-    <script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
+      <script>
 window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-    gtag('config', 'UA-113897937-1');
-    </script>
-    -->
+gtag('config', 'UA-113897937-1');
+      </script>
+      -->
   </body>
 </html>
 
