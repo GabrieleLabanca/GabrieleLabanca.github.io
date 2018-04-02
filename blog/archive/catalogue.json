@@ -48,6 +48,13 @@
       "category": "azienda",
       "tags": ["ambiente","energia","antonini","ricerca","unioneeuropea","biogas","biometano"],
       "title": "hysytech"
+    },
+    {
+      "id": "9",
+      "date": "180328",
+      "category": "azienda",
+      "tags": ["ambiente","unioneeuropea","agricoltura","i3p","startup","iot","agricolturadiprecisione"],
+      "title": "xfarm"
     }
   ]
 }
