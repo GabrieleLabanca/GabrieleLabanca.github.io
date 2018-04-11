@@ -55,6 +55,13 @@
       "category": "azienda",
       "tags": ["ambiente","unioneeuropea","agricoltura","i3p","startup","iot","agricolturadiprecisione"],
       "title": "xfarm"
+    },
+    {
+      "id": "10",
+      "date": "180409",
+      "category": "azienda",
+      "tags": ["ambiente","agricoltura","i3p","startup","gas","stagionalita","alveare","alimentari"],
+      "title": "alvearechedicesi"
     }
   ]
 }
