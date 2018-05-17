@@ -13,7 +13,22 @@ function blog_main(){
 
   $('#archive').click(function(){
     console.log("archive");
-    window.open("blog/archive/catalogue.json")
+      $('#article_display').empty();
+    for(var i=mycat.articles.length; i>0; i--){
+      art = mycat.articles[i-1];
+      var link = $("<a></a>");
+      link.text(function(){ 
+        var et = art.extended_title;
+        if(et === undefined) return art.title;
+        return et;
+      });
+      link.attr("href",get_article_url(art));
+      var date = get_article_date(art);
+      var para = $("<p></p>");
+      para.append(date," - ",link);
+      $('#article_display').append(para);
+    }
+    //window.open("blog/archive/catalogue.json")
   });
 
   $('#random_article').click(function(){
@@ -81,4 +96,14 @@ function blog_main(){
     var art_url = "blog/archive/20"+y+"/"+m+"/"+d+"/"+title+".html";
     return art_url;
   }
+
+  function get_article_date(art){
+    var date = art.date;
+    var y = date.slice(0,2);
+    var m = date.slice(2,4);
+    var d = date.slice(4,6);
+    date = d+"/"+m+"/"+y
+    return date;
+  }
+
 }

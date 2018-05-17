@@ -5,70 +5,88 @@
       "date": "171223",
       "category": "meta",
       "tags": ["welcome","program"],
-      "title": "programmatico"
+      "title": "programmatico",
+      "extended_title": "Articolo programmatico"
     },
     {
       "id": "3",
       "date": "171228",
       "category": "ambiente",
       "tags": ["ambiente","bicicletta"],
-      "title": "torino_tersa"
+      "title": "torino_tersa",
+      "extended_title": "Torino tersa"
     },
     {
       "id": "4",
       "date": "180106",
       "category": "libri",
       "tags": ["politica","sindacato","lavoro"],
-      "title": "cofferati_a_ciascuno_il_suo_mestiere"
+      "title": "cofferati_a_ciascuno_il_suo_mestiere",
+      "extended_title": "Un libro: Cofferati, A ciascuno il suo mestiere"
     },
     {
       "id": "5",
       "date": "180116",
       "category": "incontri",
       "tags": ["politica","ambiente","medicina","inceneritore","isde","ricerca"],
-      "title": "luisa_memore"
+      "title": "luisa_memore",
+      "extended_title": "Incontri: Luisa Memore"
     },
     {
       "id": "6",
       "date": "180204",
       "category": "libri",
       "tags": ["politica","realta","filosofia","psicologia"],
-      "title": "watzlawick_il_codino_del_barone_di_munchhausen"
+      "title": "watzlawick_il_codino_del_barone_di_munchhausen",
+      "extended_title": "Un libro: Watzlawick, Il codino del barone di Munchausen"
     },    
     {
       "id": "7",
       "date": "180308",
       "category": "opinione",
       "tags": ["politica","diversità","femminismo","genere","mondoarabo","cultura"],
-      "title": "unite_le_forze"
+      "title": "unite_le_forze",
+      "extended_title": "Unite le forze"
     },
     {
       "id": "8",
       "date": "180315",
       "category": "azienda",
       "tags": ["ambiente","energia","antonini","ricerca","unioneeuropea","biogas","biometano"],
-      "title": "hysytech"
+      "title": "hysytech",
+      "extended_title": "Hysytech"
     },
     {
       "id": "9",
       "date": "180328",
       "category": "azienda",
       "tags": ["ambiente","unioneeuropea","agricoltura","i3p","startup","iot","agricolturadiprecisione"],
-      "title": "xfarm"
+      "title": "xfarm",
+      "extended_title": "xFarm"
     },
     {
       "id": "10",
       "date": "180409",
       "category": "azienda",
       "tags": ["ambiente","agricoltura","i3p","startup","gas","stagionalita","alveare","alimentari"],
-      "title": "alvearechedicesi"
+      "title": "alvearechedicesi",
+      "extended_title": "Alveare che dice sì"
     },
     {
       "id": "11",
       "date": "180426",
       "category": "azienda",
       "tags": ["ambiente","i3p","startup","ciclismo","furto","citta"],
-      "title": "sherlock"
+      "title": "sherlock",
+      "extended_title": "Sherlock"
+    },
+    {
+      "id": "12",
+      "date": "180509",
+      "category": "azienda",
+      "tags": ["ambiente","i3p","startup","trasporti","economia","citta"],
+      "title": "takemythings",
+      "extended_title": "Take my things"
     }
   ]
 }
