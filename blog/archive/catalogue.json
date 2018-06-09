@@ -87,6 +87,14 @@
       "tags": ["ambiente","i3p","startup","trasporti","economia","citta"],
       "title": "takemythings",
       "extended_title": "Take my things"
+    },
+    {
+      "id": "13",
+      "date": "180603",
+      "category": "sostenibilita",
+      "tags": ["ambiente","economia","isola","fai","panarea","volontariato","rifiuti","turismo","botanica","archeologia"],
+      "title": "panarea2018",
+      "extended_title": "Progetto Panarea 2018"
     }
   ]
 }
