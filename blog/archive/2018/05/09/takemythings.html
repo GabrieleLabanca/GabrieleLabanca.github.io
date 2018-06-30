@@ -13,6 +13,8 @@
     <!-- Bootstrap Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../../../blog_style.css">
+    <script src="https://gabrielelabanca.github.io/js/blog/blog.js"></script>
+    <script src="https://gabrielelabanca.github.io/js/blog/full_blog.js"></script>
   </head>
 
   <body style="padding:5%;width:100%">
@@ -75,7 +77,17 @@
       Il link che potete usare per condividere l'articolo è <a href="https://gabrielelabanca.github.io/blog/archive/2018/04/26/sherlock.html">https://gabrielelabanca.github.io/blog/archive/2018/04/26/sherlock.html</a>. Alla prossima!
       </p>
 
-      <hr>
+
+
+        <div class="col-sm-12 btn-group">
+          <button type="button" class="btn" id="home_btn" onclick="open_home()">Pagina principale</button>
+          <button type="button" class="btn" id="random_btn" onclick="open_random()">Un altro articolo!</button>
+        </div>
+
+      <br>
+<br>
+<hr>
+
 
       <h3>Note</h3>
 
@@ -98,23 +110,25 @@
 
 
 
-        <br>
-        <div id="nav-bottom">
-          <button onclick="open_home()">HOME</button>
-        </div>
+        
+        
     </div> <!-- closes main -->
 
-    <!-- Mail address -->
-        <script>
-var user = 'gabrielelabanca',
-    domain = 'gmail.com',
-    element = document.getElementById('email');
-element.innerHTML = user + '@' + domain;
-        </script>
-    <!-- Buttons -->
-    <script> 
+    <script>
+window.onload=function(){
+  create_mail();
+  blog_main(); // in full_blog.js
+}
+function create_mail(){
+  var user = 'gabrielelabanca',
+  domain = 'gmail.com',
+  mail_element = document.getElementById('email');
+  mail_element.innerHTML = user + '@' + domain;
+}
+// Buttons
 function open_home(){window.open("https://gabrielelabanca.github.io/");}
-    </script>
+function open_random(){window.open(current_rnd_url);}
+      </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
