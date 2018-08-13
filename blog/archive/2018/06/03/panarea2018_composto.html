@@ -1,0 +1,154 @@
+<! DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>gablog</title>
+    <meta charset="utf-8">
+    <!-- mobile-view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../blog_style.css">
+    <!-- JS needed for blog navigation -->
+    <script src="https://gabrielelabanca.github.io/js/blog/blog.js"></script>
+    <script src="https://gabrielelabanca.github.io/js/blog/full_blog.js"></script>
+  </head>
+
+  <body style="padding:5%;width:100%">
+    <div id="main" class="col-sm-12">
+      <figure>
+        <img class="header-img" src="https://gabrielelabanca.github.io/blog/archive/2018/06/03/img/maremacchia.jpg" alt="mare e macchia mediterranea">
+        <figcaption>Il mare da un'altura di Panarea. <small>Fotografia di Alessandra Ghirardelli</small></figcaption>
+      </figure>
+
+      <h1>Panarea</h1>
+      <p>
+      Bentornati sul mio umile <i>log</i>! Prima di passare al succo, una premessa editoriale (di già? Di già): ho pensato, vista la dispersività degli articoli precedenti, di cambiare un pochino il formato del blog per mettere d'accordo la mia curiosità multidimensionale con il (lecito, non sia mai) bisogno di organicità del lettore. Dunque non più articoli monotematici saltabeccando qua e là, bensì articoli più lunghi, "a puntate" se volete, ma che mi consentiranno di soffermarmi per un periodo più lungo su un medesimo argomento e, si spera, di trattarlo in modo <i>più meglio</i>.
+      </p>
+      <h1>Indice</h1>
+      <ol>
+        <li><a href="#index1">Il Fondo Ambiente Italiano</a></li>
+        <li><a href="#index2">La flora di Panarea</a></li>
+        <li><a href="#index3">L'archeologia di Panarea</a></li>
+        <li>La natura di Panarea</li>
+        <li>L'economia dell'ambiente</li>
+      </ol>
+
+      <h2 id="index1"><big>1.Il Fondo Ambiente Italiano</big></h2>
+      <p><small>3 giugno 2018</small></p>
+      <div id="sez1"></div>
+
+      <h2 id="index2"><big>2.La flora di Panarea</big></h2>
+      <p><small>24 giugno 2018</small></p>
+      <div id="sez2"></div>
+      
+      <h2 id="index3"><big>3.L'archeologia di Panarea</big></h2>
+      <p><small>6 luglio 2018</small></p>
+      <div id="sez3"></div>
+
+      <hr>
+
+
+
+
+      <p>
+      Il link che potete usare per condividere l'articolo è <a href="https://gabrielelabanca.github.io/blog/archive/2018/06/03/panarea2018.html">https://gabrielelabanca.github.io/blog/archive/2018/06/03/panarea2018.html</a>. Per informazioni o commenti: <span id="email"></span>.
+      </p>
+
+
+      <div class="col-sm-12 btn-group">
+        <button type="button" class="btn" id="home_btn" onclick="open_home()">Pagina principale</button>
+        <button type="button" class="btn" id="random_btn" onclick="open_random()">Un altro articolo!</button>
+      </div>
+
+      <hr>
+
+      <br>
+
+      <h2 id="note">Note<br>
+        (Ovvero dove non la faccio breve)</h2>
+
+      <div id="note1"></div>
+      <div id="note2"></div>
+      <div id="note3"></div>
+
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> <!-- closes main -->
+
+    <!-- Mail address -->
+    <script>
+      window.onload=function(){
+        create_mail();
+        blog_main(); // in full_blog.js
+        load_html();
+      }
+function create_mail(){
+  var user = 'gabrielelabanca',
+    domain = 'gmail.com',
+    mail_element = document.getElementById('email');
+  mail_element.innerHTML = user + '@' + domain;
+}
+// Buttons
+function open_home(){window.open("https://gabrielelabanca.github.io/");}
+function open_random(){window.open(current_rnd_url);}
+
+function load_html(){
+  console.log("a");
+  $("#sez1").load("./pan_1.html");
+  $("#sez2").load("./pan_2.html");
+  $("#sez3").load("./pan_3.html");
+  $("#note1").load("./pan_1_note.html");
+  $("#note2").load("./pan_2_note.html");
+  $("#note3").load("./pan_3_note.html");
+  console.log("b");
+}
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-113897937-1');
+    </script>
+
+  </body>
+</html>
+
+
+
+
