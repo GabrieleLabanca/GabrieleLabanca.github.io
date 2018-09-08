@@ -9,7 +9,7 @@ var x_domain_min = new Date(2004, 12, 1);
 var x_domain_max = new Date(2016, 12, 31);
 var x_label = "anno", y_label = "superamenti";
 
-window.onload = function(){
+function make_plot(){
   var svg = d3.select("svg"),
   margin = {top: 20, right: 40, bottom: 40, left: 0},
   width = +svg.attr("width") - margin.left - margin.right,

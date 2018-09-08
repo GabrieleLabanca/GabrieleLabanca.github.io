@@ -1,41 +1,54 @@
 <! DOCTYPE html>
 <html lang="it">
   <head>
-    <title>gablog-unlibro</title>
+    <title>gablog</title>
     <meta charset="utf-8">
     <!-- mobile-view -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- css -->
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- Bootstrap Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Awesome fonts (icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-p{
-  font-size: 100%;
-}
-blockquote{
-  font-size: 90%;
-}
-    </style>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-        gtag('config', 'UA-113897937-1');
-    </script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../blog_style.css">
+    <!-- JS needed for blog navigation -->
+    <script src="https://gabrielelabanca.github.io/js/blog/blog.js"></script>
+    <script src="https://gabrielelabanca.github.io/js/blog/full_blog.js"></script>
   </head>
 
-  <body style="padding:50;width:100%">
-    <div style="width:60%" id="main">
+   <body style="padding:0%;width:100%">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+<a class="navbar-brand" href="#">gab-menu</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <a class="nav-link" href="#condividi">condividi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://gabrielelabanca.github.io/">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" onclick="open_random()">un altro articolo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+
+    <div id="main" style="padding:5%;width:100%" class="col-sm-12">
+
+
       <h1>Un libro: <i>A ciascuno il suo mestiere</i></h1>
       <p><small>6 gen 2018</small></p>
 
@@ -101,27 +114,52 @@ blockquote{
 
 
 
+<hr>
+
+      <p id="condividi">
+      Il link che potete usare per condividere l'articolo è <a id="thisurl" href="https://gabrielelabanca.github.io/blog/archive/2018/06/03/panarea2018.html"></a>. Per informazioni, commenti, suggerimenti: <span id="email"></span>.
+      </p>
 
 
+           </div> <!-- closes main -->
+
+        <!-- Mail address -->
 
 
+        <script>
+          window.onload=function(){
+            create_mail();
+create_thisurl();
+            blog_main(); // in full_blog.js
+          }
+function create_mail(){
+  var user = 'gabrielelabanca',
+    domain = 'gmail.com';
+    mail_element = document.getElementById('email');
+  mail_element.innerHTML = user + '@' + domain;
+}
+function create_thisurl(){
+str=window.location.href;
+var pos = str.search("#");
+var res = str.slice(0,pos);
+var loc = document.getElementById("thisurl");
+loc.innerHTML = res;
+}
+function open_random(){window.open(current_rnd_url);}
 
-      <br>
-      <a href="https://gabrielelabanca.github.io/"><button>HOME</button></a>
-    </div> <!-- closes main -->
+</script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
-    <script>
-window.dataLayer = window.dataLayer || [];
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', 'UA-113897937-1');
-    </script>
+        </script>
+
   </body>
 </html>
-
 
 
 

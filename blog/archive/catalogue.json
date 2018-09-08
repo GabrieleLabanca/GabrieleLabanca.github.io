@@ -1,14 +1,6 @@
 {
   "articles": [
     {
-      "id": "2",
-      "date": "171223",
-      "category": "meta",
-      "tags": ["welcome","program"],
-      "title": "programmatico",
-      "extended_title": "Articolo programmatico"
-    },
-    {
       "id": "3",
       "date": "171228",
       "category": "ambiente",
