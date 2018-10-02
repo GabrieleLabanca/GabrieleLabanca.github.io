@@ -87,6 +87,14 @@
       "tags": ["ambiente","economia","isola","fai","panarea","volontariato","rifiuti","turismo","botanica","archeologia"],
       "title": "panarea2018",
       "extended_title": "Progetto Panarea 2018"
+    },
+    {
+      "id": "14",
+      "date": "181002",
+      "category": "computazione",
+      "tags": ["materiali","numerico","deposizione","superfici"],
+      "title": "crescitasuperfici",
+      "extended_title": "Crescita di superfici"
     }
   ]
 }

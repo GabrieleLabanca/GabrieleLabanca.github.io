@@ -9,7 +9,7 @@ function blog_main(){
   $.getJSON("https://gabrielelabanca.github.io/blog/archive/catalogue.json", function(json) {
     mycat = json;
     //display_cover();
-    // console.log("mycat",mycat);
+    console.log("mycat",mycat);
     current_rnd_url = get_article_url(random_article(mycat));
     console.log(current_rnd_url);
   });
