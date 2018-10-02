@@ -1,0 +1,142 @@
+<! DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>gablog</title>
+    <meta charset="utf-8">
+    <!-- mobile-view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Bootstrap Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../blog_style.css">
+    <!-- JS needed for blog navigation -->
+    <script src="https://gabrielelabanca.github.io/js/blog/blog.js"></script>
+    <script src="https://gabrielelabanca.github.io/js/blog/full_blog.js"></script>
+  </head>
+
+  <body style="padding:0%;width:100%">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+      <a class="navbar-brand" href="#">gab-menu</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#index">indice</a>
+          </li>  <li class="nav-item">
+            <a class="nav-link" href="#condividi">condividi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://gabrielelabanca.github.io/">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" onclick="open_random()">un altro articolo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+
+    <div id="main" style="padding:5%;width:100%" class="col-sm-12">
+
+      <h1>Crescita di superfici</h1>
+
+      <figure>
+        <img class="header-img" src="img/simulation_ballistic.gif" alt="modello balistico">
+        <figcaption>Una deposizione balistica, dal mio <a href="https://gabrielelabanca.github.io/growingSurfaces/index.html">modello</a>.</small></figcaption>
+      </figure>
+
+
+      <p>
+      Bentornati, pi greco lettori, sul mio gablog! Vi propino ora un articoletto un po' tecnico, forse, ma che cercherò di rendere comprensibile a chi voglia saltare i dettagli tecnici. Si parla di <b>crescita di superfici</b>, che non so parafrasare perché vuol dire proprio quello che sembra. Sembra noioso? Eppure è un ambito di ricerca tuttora attivo, per esempio all'<a href="https://www.inrim.eu/ugov/organizationunit/102000">INRIM di Torino</a> (è durante la ricerca di una tesi che mi sono imbattuto in questo tema). Non vi annoio oltre e parto con l'articolo; anzi, per chi fosse molto molto impaziente, <a href="https://gabrielelabanca.github.io/growingSurfaces/index.html">qui</a> trovate direttamente un modellino al computer che ho fatto io: l'articolo sarà sostanzialmente un'esposizione divulgativa del suddetto.
+      </p>
+      <h1 id="index">Indice</h1>
+      <ol>
+        <li><a href="#index1">Il modello random</a></li>
+        <li>Il modello balistico</li>
+        <li><a href="#note">Note</a></li>
+      </ol>
+
+
+      <div id="index1"></div>
+
+      <div id="index2"></div>
+
+
+      <p id="condividi">
+      Il link che potete usare per condividere l'articolo è <a id="thisurl" href="https://gabrielelabanca.github.io/blog/archive/2018/09/24/crescitasuperfici.html"></a>. Per informazioni, commenti, suggerimenti di approfondimenti: <span id="email"></span>.
+      </p>
+
+      <hr>
+
+      <br>
+
+      <h2 id="note">Note</h2>
+
+        <div id="note1"></div>
+        <div id="note2"></div>
+
+        <br>
+
+    </div> <!-- closes main -->
+
+    <script>
+      function load_html(){
+        $("#index1").load("./art01.html");
+        //$("#index2").load("./art02.html");
+        $("#note1").load("./note01.html");
+        //$("#note2").load("./note02.html");
+      }
+window.onload=function(){
+  load_html();
+  create_mail();
+  create_thisurl();
+  blog_main(); // in full_blog.js
+}
+function create_mail(){
+  var user = 'gabrielelabanca',
+    domain = 'gmail.com',
+    mail_element = document.getElementById('email');
+  mail_element.innerHTML = user + '@' + domain;
+}
+function create_thisurl(){
+  stri=window.location.href;
+  pos = stri.search('#');
+  if(pos>0) var res = stri.slice(0,pos);
+  else res = stri;
+  var loc = document.getElementById("thisurl");
+  loc.innerHTML = res;
+}
+function open_random(){window.open(current_rnd_url);}
+
+
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-113897937-1');
+    </script>
+
+  </body>
+</html>
+
+
+
+
