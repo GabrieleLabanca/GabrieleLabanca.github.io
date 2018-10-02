@@ -18,7 +18,31 @@
     <!-- JS needed for blog navigation -->
     <script src="https://gabrielelabanca.github.io/js/blog/blog.js"></script>
     <script src="https://gabrielelabanca.github.io/js/blog/full_blog.js"></script>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: false
+        },
+        TeX: {
+          TagSide: "right",
+          TagIndent: ".8em",
+          MultLineWidth: "85%",
+          equationNumbers: {
+            autoNumber: "AMS",
+          },
+          unicode: {
+            fonts: "STIXGeneral,'Arial Unicode MS'"
+          }
+        },
+        showProcessingMessages: false
+      });
+    </script>
   </head>
   <body style="padding:0%;width:100%">
 
@@ -85,10 +109,10 @@
 
       <h2 id="note">Note</h2>
 
-        <div id="note1"></div>
-        <div id="note2"></div>
+      <div id="note1"></div>
+      <div id="note2"></div>
 
-        <br>
+      <br>
 
     </div> <!-- closes main -->
 
