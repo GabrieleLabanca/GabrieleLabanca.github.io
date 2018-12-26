@@ -1,0 +1,32 @@
+<h2>Di che parliamo: il modello random</h2>
+<p><small>2 ottobre 2018</small></p>
+
+<h3>Piatto a chi?</h3>
+<p>
+Nel quotidiano, siamo abituati a concepire le superfici come qualcosa di liscio, piani senza rugosità. Eppure basta pensare a un pezzo di legno per realizzare che dire che qualcosa dia "liscio" non è banale come potrebbe apparire: qualcosa che ci sembra un blocco uniforme si rivela a un'analisi più approfondita un complesso di montagnole e irregolarità.
+In realtà, a essere ancora più precisi, neanche ciò che <i>davvero</i> appare piatto lo è perfettamente: perfino il più liscio dei metalli presenterà scabrosità sotto un ingrandimento sufficiente. <br>
+<figure>
+  <img class="square-img" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Atomic_resolution_Au100.JPG" alt="Au100">
+  <figcaption><small>Immagine da un microscopio a scansione a effetto tunnel di una superfice d'oro (Au).</small></figcaption>
+</figure>
+
+In generale quindi parleremo di superfici intendendole come intrinsecamente ruvide. Un modo di approcciare il problema di come si formino e come si possano descrivere queste imperfezioni è studiarle come processi di <i>deposizione</i>, quindi immaginando che su una superficie inizialmente liscia vengano lasciate cadere delle particelle che si adagiano sulla superficie con meccanismi diversi (che rispecchino i fenomeni fisici che si vogliono modellizzare). Come quasi sempre in ambito scientifico, si possono adottare tre approcci: analitico, ovvero conti matematici con la penna; sperimentale, ovvero l'osservazione di come questi fenomeni avvengano in natura o in laboratorio; computazionale, il mio preferito, che in modo in un certo senso ibrido crea un modello "nel computer", utilizzando espressioni analitiche, matematiche, ma a tutti gli effetti andando a <i>misurare</i> i risultati ottenuti indirettamente.
+</p>
+
+<h3>Scommettiamo</h3>
+<p>
+Il modo più banale tramite cui le particelle possono depositarsi è, ovviamente, appoggiarsi dove cadono. Supponiamo allora di avere una linea invece di un piano, per semplificare le cose, e di far cadere in modo casuale da vari punti una particella alla volta. Per chi fosse un po' più tecnico, si tratta di una distribuzione uniforme di probabilità per la posizione di partenza delle particelle sopra la lunghezza della linea. <br>
+<figure>
+  <img class="square-img" src="img/simulation_random.gif" alt="modello random">
+  <figcaption><small>Una deposizione casuale, dal mio <a href="https://gabrielelabanca.github.io/growingSurfaces/index.html">modello</a>.</small></figcaption>
+</figure>
+Vedete nella <i>gif</i> qua sopra quel che accade: le particelle si depongono in modo casuale lungo la linea. C'è però una conseguenza controintuitiva di questo comportamento: a differenza di quanto verrebbe da pensare, una probabilità uniforme non significa che la superficie sarà piatta! In figura lo si vede bene: la demarcazione tra la superficie colorata e il vuoto, detta <i>interfaccia</i>, è molto frastagliata e tutt'altro che livellata. Per capire in modo intuitivo il motivo di questo risultato, si può pensarla in un altro modo: estrarre a caso equivale <a href="#binomial" id="refbinomial">in un certo senso</a> ad assegnare a caso un'altezza a tutte le colonnine di particelle, che quindi potranno averla molto diversa tra loro.<br>
+</p>
+
+
+
+<h3>Hai detto qualcosa?</h3>
+<p>
+Per essere più precisi, sarebbe bello ora trovare un numero che misuri in modo chiaro "quanto ruvida" sia l'interfaccia. Pensando a come rendere questa qualità qualcosa di più matematico, potrebbe venire in mente di valutare quanto, in media, le altezze siano diverse tra loro: in effetti è proprio quello che ci si aspetta da una superficie ruvida. La grandezza statistica che corrisponde a questa idea è lo <a href="#sqm" id="refsqm">scarto quadratico medio</a>, che assume in questo caso il nome di <i>ruvidezza</i>. Quello che si nota con il metodo di accrescimento che ho descritto nel paragrafo precedente, detto <i>deposizione casuale</i>, è che l'altezza della superficie cresce costantemente (ovviamente) e che lo stesso fa la ruvidezza. <br>
+Come interpretare quest'ultimo risultato? Come dicevo nel primo paragrafo, la risposta sta nell'assenza di correlazione tra le varie colonne: una singola colonna non "sa" quanto siano alte le altre, perciò cresce un po' come le pare. 
+

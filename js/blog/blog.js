@@ -123,5 +123,15 @@ function blog_main(){
 
 }
 
+function create_thisurl(){
+  stri=window.location.href;
+  pos = stri.search('#');
+  if(pos>0) var res = stri.slice(0,pos);
+  else res = stri;
+  var loc = document.getElementById("thisurl");
+  loc.innerHTML = res;
+}
+function open_random(){window.open(current_rnd_url);}
+
 
 
