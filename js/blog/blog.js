@@ -135,20 +135,20 @@ function open_random(){window.open(current_rnd_url);}
 
 
 function load_html(){
-            var idx = JSON.parse(index_data);
-            for(var i=0; i<idx.length; i++){
-              $("#index_ol li:last").after("<li></li>");
-              $("#index_ol li:last").append("<a></a>");
-              $("#index_ol li:last a").text(idx[i].title).attr('href','#index'+(i+1));
-              $("#sections div:last").after("<div></div>")
-                .attr('id','index'+(i+1)).load("./art0"+(i+1)+".html");
-              $("#sections div:last").append("<hr>");
-              $("#notes div:last").after("<div></div>").attr('id','note'+i).load("./note0"+i+".html");
-            }
-              $("#index_ol li:last").after("<li></li>");
-              $("#index_ol li:last").append("<a></a>");
-              $("#index_ol li:last a").text("Note").attr('href','#notes');
-          }
+  var idx = JSON.parse(index_data);
+  for(var i=0; i<idx.length; i++){
+    $("#index_ol li:last").after("<li></li>");
+    $("#index_ol li:last").append("<a></a>");
+    $("#index_ol li:last a").text(idx[i].title).attr('href','#index'+(i+1));
+    $("#sections div:last").after("<div></div>")
+      .attr('id','index'+(i+1)).load("./art0"+(i+1)+".html");
+    $("#sections div:last").append("<hr>");
+    $("#notes div:last").after("<div></div>").attr('id','note'+i).load("./note0"+i+".html");
+  }
+  $("#index_ol li:last").after("<li></li>");
+  $("#index_ol li:last").append("<a></a>");
+  $("#index_ol li:last a").text("Note").attr('href','#note');
+}
 
 function main_load(){
   load_html();
