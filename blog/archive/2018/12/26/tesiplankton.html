@@ -20,34 +20,10 @@
     <!--script src="https://gabrielelabanca.github.io/js/blog/blog.js"></script-->
     <script src="https://gabrielelabanca.github.io/js/blog/full_blog.js"></script>
     <script src="../../../../../../../doc/GabrieleLabanca.github.io/js/blog/mail_address.js"></script>
-    <!--script src="https://gabrielelabanca.github.io/js/blog/mail_address.js"></script-->
-    <!--script>
-      MathJax.Hub.Config({
-        config: ["MMLorHTML.js"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
-        jax: ["input/TeX"],
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-          processEscapes: false
-        },
-        TeX: {
-          TagSide: "right",
-          TagIndent: ".8em",
-          MultLineWidth: "85%",
-          equationNumbers: {
-            autoNumber: "AMS",
-          },
-          unicode: {
-            fonts: "STIXGeneral,'Arial Unicode MS'"
-          }
-        },
-        showProcessingMessages: false
-      });
-    </script-->
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="index_data.json"></script>
+
   </head>
-  <body style="padding:0%;width:100%">
+  <body style="padding:0%;width:100%" onload="main_load()">
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
       <a class="navbar-brand" href="#">gablog</a>
@@ -91,10 +67,11 @@
       </p>
 
       <h1 id="index">Indice</h1>
-      <ol>
-        <li><a href="#index1">Il modello random</a></li>
+      <ol id="index_ol">
+        <li hidden id="dummyli"></li>
+        <!--li><a href="#index1">Il modello random</a></li>
         <li><a href="#index2">Il modello balistico</a></li>
-        <li><a href="#note">Note</a></li>
+        <li><a href="#note">Note</a></li-->
       </ol>
       <div id="sections">
         <div id="dummysec"></div>
@@ -117,22 +94,31 @@
       <div id="notes">
         <div id="dummynot"></div>
 
-      <div>
+        <div>
 
-      <br>
+          <br>
 
-    </div> <!-- closes main -->
+        </div> <!-- closes main -->
 
-    <script>
-      function load_html(){
+        <script>
+          function load_html(){
 
-        $("#sections div:last").after("<div></div>").attr('id','index1').load("./art01.html");
-        $("#sections div:last").after("<hr>");
-        $("#sections div:last").after("<div></div>").attr('id','index2').load("./art02.html");
-        $("#notes div:last").after("<div></div>").attr('id','note1').load("./note01.html");
+            var idx = JSON.parse(index_data);
+            console.log(idx);
 
-      }
-window.onload=function(){
+            for(var i=0; i<idx.length; i++){
+              console.log(i,$("#index_ol il:last"));
+              $("#index_ol li:last").after("<li></li>");
+              $("#index_ol li:last").append("<a></a>");
+              $("#index_ol li:last a").text(idx[i].title).attr('href','#index'+(i+1));
+              $("#sections div:last").after("<div></div>")
+                .attr('id','index'+(i+1)).load("./art0"+(i+1)+".html");
+              $("#sections div:last").append("<hr>");
+            }
+            $("#notes div:last").after("<div></div>").attr('id','note1').load("./note01.html");
+          }
+
+function main_load(){
   load_html();
   create_mail();
   create_thisurl();
@@ -141,16 +127,16 @@ window.onload=function(){
 
 
 
-    </script>
+        </script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-113897937-1');
-    </script>
+        </script>
 
   </body>
 </html>
