@@ -52,7 +52,7 @@
     <br>
     <br>
 
-    <div id="main" style="padding:5%;width:100%" class="col-sm-12">
+    <div id="main" style="padding:5%;width:100%;padding-bottom:10%" class="col-sm-12">
 
       <h1>Crescita di superfici</h1>
 
@@ -80,7 +80,6 @@
 
       </div>
 
-      <hr>
       <p id="condividi">
       Qua finisce la storia, spero di aver equilibrato bene divulgazione e approfondimento. Un'ultima cosa: un lettore e caro amico, Domenico, mi ha proposto la questione se questi modelli possano essere utilizzati anche per la deposizione di vernici: rispondo in <a href="#vernici" id="ref_vernici">nota</a>. Questo vi incoraggi a scrivere per qualsivoglia commento: <span id="email"></span>. <br>
       Il link che potete usare per condividere l'articolo è <a id="thisurl" href="https://gabrielelabanca.github.io/blog/archive/2018/09/24/crescitasuperfici.html"></a>.
@@ -90,7 +89,7 @@
 
       <br>
 
-      <h2 id="note">Note</h2>
+      <h2 id="notes">Note</h2>
       <div id="notes">
         <div id="dummynot"></div>
 
@@ -100,12 +99,9 @@
 
         </div> <!-- closes main -->
 
-        <script>
-          function load_html(){
-
+        <!--script>
+         /* function load_html(){
             var idx = JSON.parse(index_data);
-            console.log(idx);
-
             for(var i=0; i<idx.length; i++){
               console.log(i,$("#index_ol il:last"));
               $("#index_ol li:last").after("<li></li>");
@@ -114,20 +110,23 @@
               $("#sections div:last").after("<div></div>")
                 .attr('id','index'+(i+1)).load("./art0"+(i+1)+".html");
               $("#sections div:last").append("<hr>");
+              $("#notes div:last").after("<div></div>").attr('id','note'+i).load("./note0"+i+".html");
             }
-            $("#notes div:last").after("<div></div>").attr('id','note1').load("./note01.html");
+              $("#index_ol li:last").after("<li></li>");
+              $("#index_ol li:last").append("<a></a>");
+              $("#index_ol li:last a").text("Note").attr('href','#notes');
           }
 
 function main_load(){
   load_html();
   create_mail();
   create_thisurl();
-  blog_main(); // in full_blog.js
+  blog_main(); // in full_blog.js */
 }
 
 
 
-        </script>
+        </script-->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
