@@ -129,7 +129,8 @@ function create_thisurl(){
   if(pos>0) var res = stri.slice(0,pos);
   else res = stri;
   var loc = document.getElementById("thisurl");
-  loc.innerHTML = res;
+  $("#thisurl").attr('href',stri).text(stri);
+  //loc.innerHTML = res;
 }
 function open_random(){window.open(current_rnd_url);}
 
@@ -143,11 +144,14 @@ function load_html(){
     $("#sections div:last").after("<div></div>")
       .attr('id','index'+(i+1)).load("./art0"+(i+1)+".html");
     $("#sections div:last").append("<hr>");
-    $("#notes div:last").after("<div></div>").attr('id','note'+i).load("./note0"+i+".html");
+    $("#notes div:last").after("<div></div>").attr('id','note'+(i+1)).load("./note0"+(i+1)+".html");
   }
   $("#index_ol li:last").after("<li></li>");
   $("#index_ol li:last").append("<a></a>");
   $("#index_ol li:last a").text("Note").attr('href','#note');
+  $("#introduction").load("./introduction.html");
+  $("#conclusion").load("./conclusion.html");
+
 }
 
 function main_load(){
