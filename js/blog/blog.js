@@ -146,9 +146,9 @@ function load_html(){
     $("#sections div:last").append("<hr>");
     $("#notes div:last").after("<div></div>").attr('id','note'+(i+1)).load("./note0"+(i+1)+".html");
   }
-  $("#index_ol li:last").after("<li></li>");
-  $("#index_ol li:last").append("<a></a>");
-  $("#index_ol li:last a").text("Note").attr('href','#note');
+  $("#index_ul li:last").after("<li></li>");
+  $("#index_ul li:last").append("<a></a>");
+  $("#index_ul li:last a").text("Note").attr('href','#note');
   $("#introduction").load("./introduction.html");
   $("#conclusion").load("./conclusion.html");
 
