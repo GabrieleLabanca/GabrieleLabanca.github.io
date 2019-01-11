@@ -95,6 +95,14 @@
       "tags": ["materiali","numerico","deposizione","superfici"],
       "title": "crescitasuperfici",
       "extended_title": "Crescita di superfici"
+    },
+    {
+      "id": "15",
+      "date": "190111",
+      "category": "computazione",
+      "tags": ["plankton","tesi","fluidodinamica","biologia","simulazione"],
+      "title": "tesiplankton",
+      "extended_title": "Tesi sul plankton"
     }
   ]
 }

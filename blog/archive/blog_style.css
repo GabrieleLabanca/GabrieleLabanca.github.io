@@ -18,8 +18,9 @@ iframe {
 
 figcaption {
   margin: auto;
-  width: 50%;
+  width: 75%;
   padding: 10px;
+  font-size: 90%;
 }
 
 img.square-img {

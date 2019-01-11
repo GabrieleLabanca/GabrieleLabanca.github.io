@@ -1,0 +1,112 @@
+<html lang="it">
+  <head>
+    <title>gablog</title>
+    <meta charset="utf-8">
+    <!-- mobile-view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Bootstrap Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../blog_style.css">
+    <!-- JS needed for blog navigation -->
+    <script src="https://gabrielelabanca.github.io/js/blog/blog.js"></script>
+    <script src="https://gabrielelabanca.github.io/js/blog/full_blog.js"></script>
+    <script src="https://gabrielelabanca.github.io/js/blog/mail_address.js"></script>
+    <script type="text/javascript" src="index_data.json"></script>
+
+  </head>
+  <body style="padding:0%;width:100%" onload="main_load()">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+      <a class="navbar-brand" href="#">gablog</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#index">indice</a>
+          </li>  <li class="nav-item">
+            <a class="nav-link" href="#thisurl">condividi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://gabrielelabanca.github.io/">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" onclick="open_random()">un altro articolo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+
+    <div id="main" style="padding:5%;width:100%;padding-bottom:10%" class="col-sm-12">
+
+      <div id="introduction">
+      </div>
+
+      <!--
+      <h1 id="index">Indice</h1>
+      <ol id="index_ol">
+        <li hidden id="dummyli"></li>
+      </ol>
+      <ul id="index_ul">
+        <li hidden id="dummyli2"></li>
+      </ul>
+        -->
+
+      <div id="sections">
+        <div id="dummysec"></div>
+
+
+      </div>
+
+      <div>
+        <p id="conclusion">
+        Al solito, suggerimenti correzioni commenti sono bene accetti. 
+        </p>
+        <p>
+        La mia mail è: <span id="email"></span>. <br>
+        Il link che potete usare per condividere l'articolo è <a id="thisurl" href="https://gabrielelabanca.github.io/blog/archive/2018/09/24/crescitasuperfici.html"></a>.
+        </p>
+      </div>
+
+      <hr>
+
+      <br>
+
+      <h2 id="note">Note</h2>
+      <div id="notes">
+        <div id="dummynot"></div>
+      </div>
+
+      <br>
+
+    </div> <!-- closes main -->
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113897937-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-113897937-1');
+    </script>
+
+  </body>
+</html>
+
+
+
+
